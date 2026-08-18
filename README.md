@@ -1,6 +1,25 @@
 # AI Travel Planner 🌍✈️
 
-An intelligent, full-stack **AI Travel Planner** web application designed to craft personalized trip itineraries, recommend destinations, estimate travel budgets, plan routes, and dynamically re-plan trips—**completely independent of external paid API keys**.
+An intelligent, full-stack **AI Travel Planner** web application designed to craft personalized trip itineraries, recommend destinations, estimate travel budgets, plan routes, and dynamically re-plan trips.
+
+---
+
+## 🚀 Streamlit Community Cloud Deployment Instructions
+
+### 1. Push to GitHub
+```bash
+git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/ai-travel-planner.git
+git branch -M main
+git push -u origin main
+```
+
+### 2. Deploy on Streamlit Cloud
+1. Sign in to [share.streamlit.io](https://share.streamlit.io) using your GitHub account.
+2. Click **New App** and select your repository `ai-travel-planner`.
+3. Set **Main file path** to `app.py`.
+4. (Optional) Add `GEMINI_API_KEY` under **Advanced Settings -> Secrets**.
+5. Click **Deploy!** Your app will be live at:
+   `https://<YOUR_GITHUB_USERNAME>-ai-travel-planner.streamlit.app`
 
 ---
 
