@@ -29,12 +29,15 @@ def get_token_from_request(request: Request, token_header: Optional[str] = Depen
 
 def get_or_create_dev_user(db: Session) -> User:
     user = db.query(User).filter(User.email == DEV_USER_EMAIL).first()
+    if user and ("Dev " in (user.full_name or "") or user.full_name == "Dev Traveler" or user.full_name == "Dev Traveller"):
+        user.full_name = "Dear Traveller"
+        db.commit()
     if not user:
         from app.core.security import hash_password
         user = User(
             id=1,
             email=DEV_USER_EMAIL,
-            full_name="Dev Traveler",
+            full_name="Dear Traveller",
             mobile_number="+919876543210",
             hashed_password=hash_password("DevPassword123!"),
             is_active=True,

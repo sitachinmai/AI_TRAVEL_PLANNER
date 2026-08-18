@@ -202,7 +202,7 @@
         <div class="country-selector-row">
             <span style="font-weight: 700; font-size: 0.9rem; color: #4a5568;">Select Country:</span>
             <select class="country-select" onchange="if(this.value) window.location.href=this.value;">
-                <option value="/explore" {% if not selected_country or selected_country == 'All' %}selected{% endif %}>All Countries ({{ countries|length }} Countries)</option>
+                <option value="/explore" {% if not selected_country or selected_country == 'All' %}selected{% endif %}>All Countries</option>
                 {% for c in countries %}
                 <option value="/explore?country={{ c.name }}" {% if selected_country == c.name %}selected{% endif %}>
                     {{ c.flag_emoji }} {{ c.name }} ({{ c.continent }})

@@ -95,7 +95,7 @@
         👤
       </div>
       <div>
-        <h1 style="font-size: 1.5rem; color: #0f172a; margin: 0 0 4px;">{{ user.full_name or 'Dev Traveler' }}</h1>
+        <h1 style="font-size: 1.5rem; color: #0f172a; margin: 0 0 4px;">{{ user.full_name or 'Dear Traveller' }}</h1>
         <p style="color: #64748b; margin: 0;">{{ user.email or 'dev@aitravelplanner.local' }} • Preferred Language: <strong>{{ (user.preferred_language or 'en').upper() }}</strong></p>
       </div>
     </div>
@@ -120,7 +120,7 @@
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
         <div>
           <label style="font-size: 0.85rem; color: #64748b;">Full Name</label>
-          <div style="font-size: 1.05rem; font-weight: 600; color: #1e293b;">{{ user.full_name or 'Dev Traveler' }}</div>
+          <div style="font-size: 1.05rem; font-weight: 600; color: #1e293b;">{{ user.full_name or 'Dear Traveller' }}</div>
         </div>
         <div>
           <label style="font-size: 0.85rem; color: #64748b;">Email Address</label>
@@ -248,7 +248,7 @@
       <div style="display: flex; flex-direction: column; gap: 16px;">
         <div style="background: rgba(241, 245, 249, 0.8); padding: 16px; border-radius: 14px; border: 1px solid #e2e8f0;">
           <h4 style="color: #4338ca; margin: 0 0 6px;">How do I generate a multi-day itinerary?</h4>
-          <p style="font-size: 0.95rem; color: #334155; margin: 0;">Navigate to the Dashboard or Plan My Trip page, select any of the 195 world countries or cities, and click 'Plan Trip' or ask the AI Travel Assistant!</p>
+          <p style="font-size: 0.95rem; color: #334155; margin: 0;">Navigate to the Dashboard or Plan My Trip page, select any world country or city, and click 'Plan Trip' or ask the AI Travel Assistant!</p>
         </div>
         <div style="background: rgba(241, 245, 249, 0.8); padding: 16px; border-radius: 14px; border: 1px solid #e2e8f0;">
           <h4 style="color: #4338ca; margin: 0 0 6px;">Can I modify specific days of a generated trip?</h4>

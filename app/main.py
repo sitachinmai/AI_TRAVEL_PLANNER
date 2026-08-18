@@ -113,7 +113,7 @@ def reset_password_page(request: Request):
 
 @app.get("/dashboard")
 def dashboard_page(request: Request, current_user: User = Depends(require_web_authentication), db: Session = Depends(get_db)):
-    countries = get_all_countries(db)
+    countries = get_all_countries(db, only_with_destinations=True)
     destinations = get_all_destinations(db)
     user_trips = db.query(Trip).filter(Trip.user_id == current_user.id).order_by(Trip.created_at.desc()).all()
     user_favs = db.query(Favorite).filter(Favorite.user_id == current_user.id).all()
@@ -132,7 +132,7 @@ def dashboard_page(request: Request, current_user: User = Depends(require_web_au
 @app.get("/plan-trip")
 def plan_trip_page(request: Request, current_user: User = Depends(require_web_authentication), db: Session = Depends(get_db)):
     destinations = get_all_destinations(db)
-    countries = get_all_countries(db)
+    countries = get_all_countries(db, only_with_destinations=True)
     return templates.TemplateResponse(request=request, name="plan_trip.html", context={
         "user": current_user,
         "destinations": destinations,
@@ -143,7 +143,7 @@ def plan_trip_page(request: Request, current_user: User = Depends(require_web_au
 @app.get("/explore")
 def explore_page(request: Request, q: str = None, region: str = "All", category: str = "All", country: str = "All", db: Session = Depends(get_db)):
     destinations = get_all_destinations(db, query=q, region=region, category=category, country=country)
-    countries = get_all_countries(db)
+    countries = get_all_countries(db, only_with_destinations=True)
 
     regions = ["All", "North", "South", "West", "East", "Central", "Northeast"]
     categories = ["All", "Monument", "Heritage Site", "Beach", "Hill Fort", "UNESCO Temple", "Waterfall", "Park"]

@@ -9,11 +9,11 @@
     <style>
         .hero-banner {
             position: relative;
-            height: 380px;
-            border-radius: 24px;
+            height: 240px;
+            border-radius: 20px;
             overflow: hidden;
-            margin-bottom: 2rem;
-            box-shadow: 0 16px 36px rgba(31, 38, 135, 0.12);
+            margin-bottom: 1.5rem;
+            box-shadow: 0 12px 30px rgba(31, 38, 135, 0.12);
         }
         .hero-image {
             width: 100%;
@@ -25,22 +25,36 @@
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 2.5rem;
-            background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0) 100%);
+            padding: 1.8rem;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0) 100%);
             color: #ffffff;
         }
         .tab-nav {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             overflow-x: auto;
-            padding-bottom: 12px;
+            white-space: nowrap;
+            padding: 8px 12px;
             margin-bottom: 1.5rem;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 0 6px 20px rgba(31, 38, 135, 0.08);
+            position: sticky;
+            top: 75px;
+            z-index: 100;
+        }
+        .tab-nav::-webkit-scrollbar {
+            display: none;
         }
         .tab-btn {
-            background: rgba(255, 255, 255, 0.65);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.6);
-            padding: 10px 22px;
+            background: transparent;
+            border: none;
+            padding: 10px 20px;
             border-radius: 9999px;
             font-size: 0.9rem;
             font-weight: 600;
@@ -48,22 +62,35 @@
             cursor: pointer;
             white-space: nowrap;
             transition: all 0.2s ease;
+            flex-shrink: 0;
         }
         .tab-btn:hover {
-            background: rgba(224, 231, 255, 0.9);
+            background: rgba(224, 231, 255, 0.7);
             color: #3730a3;
         }
         .tab-btn.active {
-            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
-            color: #ffffff;
-            border-color: transparent;
-            box-shadow: 0 4px 14px rgba(99, 102, 241, 0.3);
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%) !important;
+            color: #ffffff !important;
+            box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35) !important;
         }
+
+        .destination-content-container {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(31, 38, 135, 0.06);
+            margin-bottom: 2rem;
+            min-height: 400px;
+        }
+
         .tab-pane {
             display: none;
         }
         .tab-pane.active {
-            display: block;
+            display: block !important;
         }
 
         /* Glassmorphic History & Culture Card Styles */
@@ -75,8 +102,8 @@
             border: 1px solid rgba(255, 255, 255, 0.65);
             box-shadow: 0 12px 32px 0 rgba(31, 38, 135, 0.08);
             border-radius: 24px;
-            padding: 2.2rem;
-            margin-bottom: 1.8rem;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -159,53 +186,56 @@
     </header>
 
     <main class="page-container" style="max-width: 1200px; margin: 30px auto; padding: 0 20px;">
-        <!-- DESTINATION MAIN CONTENT (FULL WIDTH - NO SIDEBAR CHATBOT) -->
-        <div class="destination-main-content">
-            <!-- Hero Section -->
-            <div class="hero-banner">
-                <img src="{{ destination.image if destination.image and destination.image != 'None' else '/static/images/placeholder.svg' }}" 
-                     alt="{{ destination.name }}" 
-                     class="hero-image"
-                     onerror="this.onerror=null; this.src='/static/images/placeholder.svg';">
-                <div class="hero-overlay">
-                    <span class="prompt-chip" style="background: rgba(255,255,255,0.25); color: #ffffff; border: none; backdrop-filter: blur(8px); margin-bottom: 10px;">
-                        📍 {{ destination.region or destination.country }}
-                    </span>
-                    <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 6px;">{{ destination.name }}</h1>
-                    <p style="font-size: 1.1rem; opacity: 0.95;">{{ destination.description }}</p>
-                </div>
+        <!-- Compact Hero Banner -->
+        <div class="hero-banner">
+            <img src="{{ destination.image if destination.image and destination.image != 'None' else '/static/images/placeholder.svg' }}" 
+                 alt="{{ destination.name }}" 
+                 class="hero-image"
+                 onerror="this.onerror=null; this.src='/static/images/placeholder.svg';">
+            <div class="hero-overlay">
+                <span class="prompt-chip" style="background: rgba(255,255,255,0.25); color: #ffffff; border: none; backdrop-filter: blur(8px); margin-bottom: 6px;">
+                    📍 {{ destination.region or destination.country }}
+                </span>
+                <h1 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 4px;">{{ destination.name }}</h1>
+                <p style="font-size: 1rem; opacity: 0.95; margin: 0;">{{ destination.description }}</p>
             </div>
+        </div>
 
-            <!-- Tabbed Navigation -->
-            <div class="tab-nav">
-                <button class="tab-btn active" onclick="switchTab('overview')">Overview</button>
-                <button class="tab-btn" onclick="switchTab('history')">📜 History & Culture</button>
-                <button class="tab-btn" onclick="switchTab('places')">📍 Places to Visit ({{ destination.places|length }})</button>
-                <button class="tab-btn" onclick="switchTab('stays')">🏨 Stays ({{ destination.stays|length }})</button>
-                <button class="tab-btn" onclick="switchTab('food')">🍜 Food & Specialties ({{ destination.local_foods|length }})</button>
-                <button class="tab-btn" onclick="switchTab('transport')">🚕 Transportation</button>
-                <button class="tab-btn" onclick="switchTab('safety')">🚨 Emergency Info</button>
-            </div>
+        <!-- Horizontal Tab Navigation -->
+        <div class="tab-nav">
+            <button class="tab-btn active" id="tab-overview" onclick="switchTab('overview')">📜 Overview</button>
+            <button class="tab-btn" id="tab-history" onclick="switchTab('history')">📜 History & Culture</button>
+            <button class="tab-btn" id="tab-places" onclick="switchTab('places')">📍 Places to Visit ({{ destination.places|length }})</button>
+            <button class="tab-btn" id="tab-stays" onclick="switchTab('stays')">🏨 Stays ({{ destination.stays|length }})</button>
+            <button class="tab-btn" id="tab-food" onclick="switchTab('food')">🍜 Food & Specialties ({{ destination.local_foods|length }})</button>
+            <button class="tab-btn" id="tab-transport" onclick="switchTab('transport')">🚕 Transportation</button>
+            <button class="tab-btn" id="tab-safety" onclick="switchTab('safety')">🚨 Emergency Info</button>
+        </div>
+
+        <!-- Single Content Area Below Horizontal Tabs -->
+        <div class="destination-content-container">
 
             <!-- 1. Overview Tab -->
-            <div id="tab-overview" class="tab-pane active glass-card" style="padding: 2rem;">
-                <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: #1e1b4b;">About {{ destination.name }}</h2>
-                <p style="font-size: 1.05rem; color: #475569; margin-bottom: 1.5rem;">{{ destination.description }}</p>
+            <div id="content-overview" class="tab-pane active">
+                <h2 style="font-size: 1.5rem; font-weight: 800; color: #1e1b4b; margin-bottom: 1.2rem;">📜 Overview & Key Details</h2>
+                <p style="font-size: 1.05rem; color: #475569; margin-bottom: 1.5rem; line-height: 1.7;">{{ destination.description }}</p>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
-                    <div class="glass-card" style="padding: 1.2rem; background: rgba(255,255,255,0.5);">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+                    <div class="glass-card" style="padding: 1.2rem; background: rgba(255,255,255,0.6);">
                         <h4 style="font-size: 0.95rem; color: #4f46e5; margin-bottom: 4px;">🌤️ Best Time to Visit</h4>
-                        <p style="font-weight: 700; color: #1e293b;">{{ destination.best_time }}</p>
+                        <p style="font-weight: 700; color: #1e293b; font-size: 1.1rem; margin: 0;">{{ destination.best_time }}</p>
                     </div>
-                    <div class="glass-card" style="padding: 1.2rem; background: rgba(255,255,255,0.5);">
+                    <div class="glass-card" style="padding: 1.2rem; background: rgba(255,255,255,0.6);">
                         <h4 style="font-size: 0.95rem; color: #4f46e5; margin-bottom: 4px;">📅 Recommended Duration</h4>
-                        <p style="font-weight: 700; color: #1e293b;">{{ destination.recommended_days }} Days</p>
+                        <p style="font-weight: 700; color: #1e293b; font-size: 1.1rem; margin: 0;">{{ destination.recommended_days }} Days</p>
                     </div>
-                    <div class="glass-card" style="padding: 1.2rem; background: rgba(255,255,255,0.5);">
+                    <div class="glass-card" style="padding: 1.2rem; background: rgba(255,255,255,0.6);">
                         <h4 style="font-size: 0.95rem; color: #4f46e5; margin-bottom: 4px;">💰 Approx. Daily Budget</h4>
-                        <p style="font-weight: 700; color: #1e293b;">₹{{ "{:,.0f}".format(destination.approximate_budget or 3500) }} / day</p>
+                        <p style="font-weight: 700; color: #1e293b; font-size: 1.1rem; margin: 0;">₹{{ "{:,.0f}".format(destination.approximate_budget or 3500) }} / day</p>
                     </div>
-                <div style="margin-top: 1.5rem; padding: 1.2rem; background: linear-gradient(135deg, rgba(224, 231, 255, 0.6) 0%, rgba(238, 242, 255, 0.8) 100%); border-radius: 16px; border: 1px solid rgba(99, 102, 241, 0.25); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+                </div>
+
+                <div style="padding: 1.2rem; background: linear-gradient(135deg, rgba(224, 231, 255, 0.6) 0%, rgba(238, 242, 255, 0.8) 100%); border-radius: 16px; border: 1px solid rgba(99, 102, 241, 0.25); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
                     <div>
                         <strong style="color: #1e1b4b; font-size: 0.95rem; display: block; margin-bottom: 2px;">📖 Verified Research Source Page:</strong>
                         <span style="font-size: 0.85rem; color: #475569;">Explore official travel history & landmark documentation for {{ destination.name }}</span>
@@ -217,37 +247,33 @@
             </div>
 
             <!-- 2. History & Culture Tab -->
-            <div id="tab-history" class="tab-pane">
+            <div id="content-history" class="tab-pane">
+                <h2 style="font-size: 1.5rem; font-weight: 800; color: #1e1b4b; margin-bottom: 1.2rem;">📜 History & Culture</h2>
                 <div class="glass-history-card">
                     <div class="glass-bg-faint" style="background-image: url('{{ destination.image if destination.image and destination.image != 'None' else '/static/images/placeholder.svg' }}');"></div>
                     <div class="glass-card-content">
                         <div class="card-header-icon">📜</div>
-                        <h2 style="font-size: 1.6rem; font-weight: 800; color: #1e1b4b; margin-bottom: 0.8rem;">📖 History of {{ destination.name }}</h2>
-                        <p style="font-size: 1.05rem; line-height: 1.7; color: #334155;">
-                            Discover the historical story of <strong>{{ destination.name }}</strong> — from ancient landmarks and royal dynasties to colonial influences, important heritage events, and UNESCO-recognized monuments. Explore how the city's past shaped its iconic architecture, traditions, and distinct cultural identity.
+                        <h3 style="font-size: 1.4rem; font-weight: 800; color: #1e1b4b; margin-bottom: 0.8rem;">📖 History of {{ destination.name }}</h3>
+                        <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin: 0;">
+                            {{ destination.history }}
                         </p>
-                        {% if destination.history %}
-                            <p style="margin-top: 1rem; line-height: 1.6; color: #475569;">{{ destination.history }}</p>
-                        {% endif %}
                     </div>
                 </div>
 
-                <div class="glass-history-card">
+                <div class="glass-history-card" style="margin-bottom: 0;">
                     <div class="glass-card-content">
                         <div class="card-header-icon">🎭</div>
-                        <h2 style="font-size: 1.6rem; font-weight: 800; color: #1e1b4b; margin-bottom: 0.8rem;">✨ Cultural Identity & Local Heritage</h2>
-                        <p style="font-size: 1.05rem; line-height: 1.7; color: #334155;">
-                            Experience the living heritage of <strong>{{ destination.name }}</strong> through traditional music, colorful regional festivals, local artisan crafts, and community customs. Local hospitality, warm culinary traditions, and vibrant artistic celebrations define daily life in {{ destination.name }}.
+                        <h3 style="font-size: 1.4rem; font-weight: 800; color: #1e1b4b; margin-bottom: 0.8rem;">✨ Cultural Identity & Local Heritage</h3>
+                        <p style="font-size: 1.05rem; line-height: 1.7; color: #334155; margin: 0;">
+                            {{ destination.culture }}
                         </p>
-                        {% if destination.culture %}
-                            <p style="margin-top: 1rem; line-height: 1.6; color: #475569;">{{ destination.culture }}</p>
-                        {% endif %}
                     </div>
                 </div>
             </div>
 
             <!-- 3. Places to Visit Tab -->
-            <div id="tab-places" class="tab-pane">
+            <div id="content-places" class="tab-pane">
+                <h2 style="font-size: 1.5rem; font-weight: 800; color: #1e1b4b; margin-bottom: 1.2rem;">📍 Places to Visit in {{ destination.name }} ({{ destination.places|length }})</h2>
                 <div class="card-grid">
                     {% for place in destination.places %}
                     <div class="glass-card" style="overflow: hidden; display: flex; flex-direction: column;">
@@ -259,50 +285,48 @@
                             <div>
                                 <span class="badge" style="background: #e0e7ff; color: #4338ca; margin-bottom: 8px;">{{ place.category }}</span>
                                 <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 6px; color: #1e1b4b;">{{ place.name }}</h3>
-                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 12px;">{{ place.description }}</p>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 12px; line-height: 1.5;">{{ place.description }}</p>
                             </div>
-                            <div style="border-top: 1px solid #e2e8f0; pt: 12px; margin-top: 12px; display: flex; justify-content: space-between; font-size: 0.85rem; color: #64748b;">
+                            <div style="border-top: 1px solid #e2e8f0; padding-top: 12px; margin-top: 12px; display: flex; justify-content: space-between; font-size: 0.85rem; color: #64748b;">
                                 <span>⏱️ {{ place.estimated_visit_time or '2 Hours' }}</span>
                                 <span style="font-weight: 700; color: #16a34a;">₹{{ "{:,.0f}".format(place.estimated_cost or 0) }}</span>
                             </div>
-
-                            {% if place.name == 'San Carlos de Bariloche Scenic Lakes' or place.name == 'Cerro Campanario Viewpoint' %}
-                                <div style="margin-top: 12px; border-top: 1px dashed #cbd5e1; padding-top: 10px;">
-                                    <a href="https://solsalute.com/blog/things-to-do-in-bariloche-argentina/" target="_blank" rel="noopener" style="color: #4f46e5; font-weight: 700; font-size: 0.82rem; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;">
-                                        🔗 SolSalute Bariloche Travel Guide →
-                                    </a>
-                                </div>
-                            {% endif %}
                         </div>
                     </div>
-                    {% else %}
-                    <p style="color: #64748b;">No places listed yet for {{ destination.name }}.</p>
                     {% endfor %}
                 </div>
             </div>
 
             <!-- 4. Stays Tab -->
-            <div id="tab-stays" class="tab-pane">
+            <div id="content-stays" class="tab-pane">
+                <h2 style="font-size: 1.5rem; font-weight: 800; color: #1e1b4b; margin-bottom: 1.2rem;">🏨 Accommodation & Stays in {{ destination.name }} ({{ destination.stays|length }})</h2>
                 <div class="card-grid">
                     {% for stay in destination.stays %}
-                    <div class="glass-card" style="padding: 1.5rem;">
-                        <span class="badge" style="background: #fef3c7; color: #b45309; margin-bottom: 8px;">{{ stay.category }}</span>
-                        <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 6px; color: #1e1b4b;">{{ stay.name }}</h3>
-                        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 10px;">📍 {{ stay.area or destination.name }}</p>
-                        <p style="font-size: 0.9rem; color: #475569; margin-bottom: 12px;">{{ stay.description }}</p>
-                        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #e2e8f0; padding-top: 10px;">
-                            <span style="font-size: 0.9rem; font-weight: 700; color: #4f46e5;">₹{{ "{:,.0f}".format(stay.approximate_price or 2500) }} / night</span>
-                            <span style="color: #eab308; font-size: 0.85rem;">⭐ {{ stay.rating or '4.5' }}</span>
+                    <div class="glass-card" style="overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="{{ stay.image if stay.image and stay.image != 'None' else '/static/images/placeholder.svg' }}" 
+                             alt="{{ stay.name }}" 
+                             style="width: 100%; height: 180px; object-fit: cover;"
+                             onerror="this.onerror=null; this.src='/static/images/placeholder.svg';">
+                        <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <span class="badge" style="background: #fef3c7; color: #b45309; margin-bottom: 8px;">{{ stay.category }}</span>
+                                <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 6px; color: #1e1b4b;">{{ stay.name }}</h3>
+                                <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 8px;">📍 {{ stay.area or destination.name }}</p>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 12px; line-height: 1.5;">{{ stay.description }}</p>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #e2e8f0; padding-top: 10px;">
+                                <span style="font-size: 0.95rem; font-weight: 700; color: #4f46e5;">{{ stay.price_display or ('₹' ~ "{:,.0f}".format(stay.approximate_price or 2500) ~ ' / night') }}</span>
+                                <span style="color: #eab308; font-size: 0.85rem; font-weight: 700;">⭐ {{ stay.rating or '4.5' }}</span>
+                            </div>
                         </div>
                     </div>
-                    {% else %}
-                    <p style="color: #64748b;">No hotel recommendations listed yet.</p>
                     {% endfor %}
                 </div>
             </div>
 
-            <!-- 5. Food Tab -->
-            <div id="tab-food" class="tab-pane">
+            <!-- 5. Food & Specialties Tab -->
+            <div id="content-food" class="tab-pane">
+                <h2 style="font-size: 1.5rem; font-weight: 800; color: #1e1b4b; margin-bottom: 1.2rem;">🍜 Must-Try Food & Local Specialties ({{ destination.local_foods|length }})</h2>
                 <div class="card-grid">
                     {% for food in destination.local_foods %}
                     <div class="glass-card" style="padding: 1.5rem; display: flex; flex-direction: column;">
@@ -312,56 +336,75 @@
                              onerror="this.onerror=null; this.src='/static/images/placeholder_food.svg';">
                         <span class="badge" style="background: #dcfce7; color: #15803d; margin-bottom: 8px;">{{ food.category }}</span>
                         <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 6px; color: #1e1b4b;">{{ food.name }}</h3>
-                        <p style="font-size: 0.9rem; color: #475569; flex: 1;">{{ food.description }}</p>
+                        <p style="font-size: 0.9rem; color: #475569; flex: 1; line-height: 1.5;">{{ food.description }}</p>
                         {% if food.is_must_try %}
-                        <span style="display: inline-block; margin-top: 8px; font-size: 0.8rem; font-weight: 700; color: #dc2626;">🔥 Must-Try Regional Dish</span>
+                        <span style="display: inline-block; margin-top: 10px; font-size: 0.8rem; font-weight: 700; color: #dc2626;">🔥 Must-Try Regional Dish</span>
                         {% endif %}
                     </div>
-                    {% else %}
-                    <p style="color: #64748b;">No local foods listed yet.</p>
                     {% endfor %}
                 </div>
             </div>
 
             <!-- 6. Transportation Tab -->
-            <div id="tab-transport" class="tab-pane glass-card" style="padding: 2rem;">
-                <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #1e1b4b;">Getting Around {{ destination.name }}</h3>
+            <div id="content-transport" class="tab-pane">
+                <h2 style="font-size: 1.5rem; font-weight: 800; color: #1e1b4b; margin-bottom: 1.2rem;">🚕 Transportation & Getting Around {{ destination.name }}</h2>
                 {% for t in destination.transports %}
-                <div style="padding: 1rem; background: rgba(255,255,255,0.6); border-radius: 12px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+                <div style="padding: 1.2rem; background: rgba(255,255,255,0.7); border-radius: 14px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; border: 1px solid rgba(226, 232, 240, 0.8);">
                     <div>
-                        <strong style="color: #1e293b;">{{ t.transport_mode }}</strong>
-                        <span style="color: #64748b; font-size: 0.9rem; display: block;">{{ t.origin or 'City Center' }} to {{ t.destination or 'Local Sight' }}</span>
+                        <strong style="color: #1e293b; font-size: 1.05rem;">{{ t.transport_mode }}</strong>
+                        <span style="color: #64748b; font-size: 0.9rem; display: block; margin-top: 2px;">📍 {{ t.origin }} → {{ t.destination }}</span>
+                        {% if t.description %}
+                        <span style="color: #475569; font-size: 0.85rem; display: block; margin-top: 2px;">{{ t.description }}</span>
+                        {% endif %}
                     </div>
-                    <span style="font-weight: 700; color: #4f46e5;">₹{{ "{:,.0f}".format(t.approximate_cost or 200) }}</span>
+                    <span style="font-weight: 800; font-size: 1.1rem; color: #4f46e5;">{{ t.cost_display or ('₹' ~ "{:,.0f}".format(t.approximate_cost or 200)) }}</span>
                 </div>
-                {% else %}
-                <p style="color: #64748b;">Local Metro, Taxis, Buses, and Auto-rickshaws are readily available.</p>
                 {% endfor %}
             </div>
 
-            <!-- 7. Emergency Tab -->
-            <div id="tab-safety" class="tab-pane glass-card" style="padding: 2rem;">
-                <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #991b1b;">🚨 Emergency Contacts & Safety Info</h3>
-                <ul style="line-height: 2; color: #334155; list-style-type: none; padding-left: 0;">
-                    <li><strong>Emergency Police:</strong> 112 / 100</li>
-                    <li><strong>Medical Ambulance:</strong> 102 / 108</li>
-                    <li><strong>Tourist Helpline:</strong> 1363</li>
-                    <li><strong>Nearest Hospital:</strong> General District / City Hospital</li>
-                </ul>
+            <!-- 7. Emergency Info Tab -->
+            <div id="content-safety" class="tab-pane">
+                <h2 style="font-size: 1.5rem; font-weight: 800; color: #991b1b; margin-bottom: 1.2rem;">🚨 Emergency Contacts & Tourist Safety Info</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem;">
+                    <div style="background: rgba(254, 242, 242, 0.8); padding: 1.2rem; border-radius: 14px; border: 1px solid #fecaca;">
+                        <strong style="color: #991b1b; display: block; margin-bottom: 4px;">👮 Emergency Police</strong>
+                        <span style="font-size: 1.2rem; font-weight: 800; color: #7f1d1d;">112 / 100</span>
+                    </div>
+                    <div style="background: rgba(254, 242, 242, 0.8); padding: 1.2rem; border-radius: 14px; border: 1px solid #fecaca;">
+                        <strong style="color: #991b1b; display: block; margin-bottom: 4px;">🚑 Medical Ambulance</strong>
+                        <span style="font-size: 1.2rem; font-weight: 800; color: #7f1d1d;">102 / 108</span>
+                    </div>
+                    <div style="background: rgba(254, 242, 242, 0.8); padding: 1.2rem; border-radius: 14px; border: 1px solid #fecaca;">
+                        <strong style="color: #991b1b; display: block; margin-bottom: 4px;">📞 Tourist Helpline</strong>
+                        <span style="font-size: 1.2rem; font-weight: 800; color: #7f1d1d;">1363</span>
+                    </div>
+                    <div style="background: rgba(254, 242, 242, 0.8); padding: 1.2rem; border-radius: 14px; border: 1px solid #fecaca;">
+                        <strong style="color: #991b1b; display: block; margin-bottom: 4px;">🏥 Nearest Hospital</strong>
+                        <span style="font-size: 0.95rem; font-weight: 700; color: #7f1d1d;">General District & City Hospital</span>
+                    </div>
+                </div>
             </div>
+
         </div>
     </main>
 
     <script>
         function switchTab(tabId) {
-            document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-pane').forEach(pane => {
+                pane.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
 
-            const targetPane = document.getElementById('tab-' + tabId);
-            if (targetPane) targetPane.classList.add('active');
-
-            const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(btn => btn.getAttribute('onclick').includes(tabId));
-            if (activeBtn) activeBtn.classList.add('active');
+            const targetPane = document.getElementById('content-' + tabId);
+            if (targetPane) {
+                targetPane.classList.add('active');
+            }
+            const targetBtn = document.getElementById('tab-' + tabId);
+            if (targetBtn) {
+                targetBtn.classList.add('active');
+            }
         }
     </script>
 
