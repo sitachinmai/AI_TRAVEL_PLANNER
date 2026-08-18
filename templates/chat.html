@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Travel Buddy — AI Travel Planner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1rem 2rem;
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: #6366f1;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+    .nav-link {
+      text-decoration: none;
+      color: #475569;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .nav-link.active {
+      color: #6366f1;
+    }
+    .chat-page-container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .chat-card {
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 75vh;
+    }
+    .chat-header {
+      background: linear-gradient(135deg, #e0e7ff 0%, #fae8ff 100%);
+      padding: 20px 24px;
+      border-bottom: 1px solid #cbd5e1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .chat-messages-area {
+      flex: 1;
+      padding: 24px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .chat-message {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      max-width: 85%;
+    }
+    .chat-message.user-message {
+      align-self: flex-end;
+      flex-direction: row-reverse;
+    }
+    .msg-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      border: 1px solid #cbd5e1;
+      flex-shrink: 0;
+    }
+    .user-message .msg-avatar {
+      background: #6366f1;
+      color: white;
+      border: none;
+    }
+    .msg-bubble {
+      background: #f1f5f9;
+      color: #1e293b;
+      padding: 14px 18px;
+      border-radius: 18px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .user-message .msg-bubble {
+      background: #6366f1;
+      color: #ffffff;
+      border-top-right-radius: 4px;
+    }
+    .ai-message .msg-bubble {
+      border-top-left-radius: 4px;
+    }
+    .suggested-prompts {
+      padding: 12px 24px;
+      background: #f8fafc;
+      border-top: 1px solid #f1f5f9;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .prompt-chip {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .prompt-chip:hover {
+      background: #e0e7ff;
+      border-color: #818cf8;
+      color: #3730a3;
+    }
+    .chat-input-area {
+      padding: 18px 24px;
+      background: #ffffff;
+      border-top: 1px solid #e2e8f0;
+      display: flex;
+      gap: 12px;
+    }
+    .chat-input {
+      flex: 1;
+      padding: 12px 20px;
+      border-radius: 30px;
+      border: 1px solid #cbd5e1;
+      outline: none;
+      font-size: 0.95rem;
+    }
+    .btn-send {
+      background: #6366f1;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-send:hover {
+      background: #4f46e5;
+    }
+
+    /* Cute AI Robot Animations */
+    @keyframes robotFloat {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-4px) rotate(2deg); }
+    }
+    @keyframes eyeBlink {
+      0%, 90%, 100% { transform: scaleY(1); }
+      95% { transform: scaleY(0.1); }
+    }
+    @keyframes antennaPulse {
+      0%, 100% { opacity: 1; filter: drop-shadow(0 0 6px #ef4444); }
+      50% { opacity: 0.6; filter: drop-shadow(0 0 2px #ef4444); }
+    }
+    .cute-robot-mascot {
+      animation: robotFloat 3s ease-in-out infinite;
+      display: inline-block;
+    }
+    .robot-eye {
+      transform-origin: center;
+      animation: eyeBlink 4s ease-in-out infinite;
+    }
+    .antenna-glow {
+      animation: antennaPulse 2s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="/" class="brand">
+        <span>✨</span> AI Travel Planner
+      </a>
+      <nav class="nav-links">
+        <a href="/dashboard" class="nav-link">🏠 Dashboard</a>
+        <a href="/explore" class="nav-link">🌍 Explore</a>
+        <a href="/plan-trip" class="nav-link">✈️ Plan My Trip</a>
+        <a href="/chat" class="nav-link active">🤖 AI Assistant</a>
+        <a href="/profile" class="nav-link">👤 Profile</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="chat-page-container">
+    <div class="chat-card">
+      
+      <!-- Chat Header with Cute Globe Mascot -->
+      <div class="chat-header">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div class="cute-robot-mascot">
+            <img src="/static/images/cute_globe_mascot.png" alt="Cute AI Globe Mascot" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; filter: drop-shadow(0 4px 12px rgba(99,102,241,0.3));" />
+          </div>
+          <div>
+            <h2 style="font-size: 1.3rem; color: #1e1b4b; margin: 0 0 2px; font-weight: 800;">AI Travel Assistant 🤖</h2>
+            <p style="font-size: 0.85rem; color: #4338ca; margin: 0;">Interactive ChatGPT-Style Travel Buddy • 195 Countries</p>
+          </div>
+        </div> 
+        <button onclick="clearChat()" class="btn btn-secondary" style="font-size: 0.8rem; padding: 6px 14px; border-radius: 20px; background: #ffffff; border: 1px solid #cbd5e1; cursor: pointer;">Clear Chat 🗑️</button>
+      </div>
+
+      <!-- Messages Area -->
+      <div class="chat-messages-area" id="chatBox">
+        <div class="chat-message ai-message">
+          <div class="msg-avatar">🤖</div>
+          <div class="msg-bubble">
+            Hello {{ user.full_name or 'Traveler' }}! 🌸 I am your cute AI Travel Buddy, connected live to our SQLite global travel database.<br><br>
+            Ask me for custom itineraries, budget tips, nature destinations, or regional food recommendations!
+          </div>
+        </div>
+      </div>
+
+      <!-- Suggested Prompt Chips -->
+      <div class="suggested-prompts">
+        <span class="prompt-chip" onclick="usePrompt('Plan a 3 day trip to Goa')">✈️ Plan my trip</span>
+        <span class="prompt-chip" onclick="usePrompt('Plan a budget trip to Europe')">💰 Budget destinations</span>
+        <span class="prompt-chip" onclick="usePrompt('What food should I try in Hyderabad?')">🍜 Local food</span>
+        <span class="prompt-chip" onclick="usePrompt('Show me mountain destinations')">🏔️ Nature destinations</span>
+        <span class="prompt-chip" onclick="usePrompt('Plan a 7 day trip to Japan')">🇯🇵 Explore Japan</span>
+        <span class="prompt-chip" onclick="usePrompt('Make Day 2 cheaper')">💸 Make Day 2 cheaper</span>
+      </div>
+
+      <!-- Chat Input Form -->
+      <form id="chatForm" class="chat-input-area">
+        <input type="text" id="chatInput" placeholder="Ask me anything about your trip..." class="chat-input" required />
+        <button type="submit" id="sendBtn" class="btn-send">Send 🚀</button>
+      </form>
+    </div>
+  </main>
+
+  <footer style="text-align: center; padding: 20px; color: #94a3b8; font-size: 0.85rem;">
+    © 2026 AI Travel Planner. All rights reserved. | Privacy | Terms | Help | Contact
+  </footer>
+
+  <script>
+    function clearChat() {
+      const chatBox = document.getElementById('chatBox');
+      if (chatBox) {
+        chatBox.innerHTML = `
+          <div class="chat-message ai-message">
+            <div class="msg-avatar">🤖</div>
+            <div class="msg-bubble">
+              Hello {{ user.full_name or 'Traveler' }}! 🌸 I am your AI Travel Buddy. Where would you like to travel next?
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    function usePrompt(text) {
+      const input = document.getElementById('chatInput');
+      const form = document.getElementById('chatForm');
+      if (input) {
+        input.value = text;
+        if (form) form.dispatchEvent(new Event('submit'));
+      }
+    }
+
+    const chatForm = document.getElementById('chatForm');
+    const chatInput = document.getElementById('chatInput');
+    const chatBox = document.getElementById('chatBox');
+    const sendBtn = document.getElementById('sendBtn');
+
+    if (chatForm) {
+      chatForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const text = chatInput.value.trim();
+        if (!text) return;
+
+        // Append User Message
+        const userMsg = document.createElement('div');
+        userMsg.className = 'chat-message user-message';
+        userMsg.innerHTML = `
+          <div class="msg-avatar">👤</div>
+          <div class="msg-bubble">${text.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</div>
+        `;
+        chatBox.appendChild(userMsg);
+        chatInput.value = '';
+        chatBox.scrollTop = chatBox.scrollHeight;
+
+        // Disable Controls
+        chatInput.disabled = true;
+        sendBtn.disabled = true;
+        sendBtn.textContent = 'Thinking...';
+
+        // Append Thinking... Bubble
+        const thinkingMsg = document.createElement('div');
+        thinkingMsg.className = 'chat-message ai-message';
+        thinkingMsg.innerHTML = `
+          <div class="msg-avatar">🤖</div>
+          <div class="msg-bubble">🤖 <em>AI is thinking and querying travel database...</em></div>
+        `;
+        chatBox.appendChild(thinkingMsg);
+        chatBox.scrollTop = chatBox.scrollHeight;
+
+        try {
+          const res = await fetch('/ai/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: text })
+          });
+
+          if (!res.ok) {
+            throw new Error(`Server returned status ${res.status}`);
+          }
+
+          const data = await res.json();
+          let responseText = data.response || 'Sorry, I could not process your request.';
+          
+          // Format markdown bold & linebreaks
+          responseText = responseText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+          responseText = responseText.replace(/\n/g, '<br>');
+
+          let richHTML = `<div class="msg-bubble">${responseText}</div>`;
+
+          // If trip_data with itinerary is present, render rich visual cards
+          if (data.trip_data && data.trip_data.itinerary && data.trip_data.itinerary.length > 0) {
+            const td = data.trip_data;
+            richHTML += `
+              <div style="margin-top: 15px; background: #ffffff; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); color: #1e293b;">
+                <!-- Hero Image -->
+                <div style="position: relative; height: 160px; overflow: hidden;">
+                  <img src="${td.image || '/static/images/placeholder.svg'}" onerror="this.src='/static/images/placeholder.svg'" style="width: 100%; height: 100%; object-fit: cover;" />
+                  <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); padding: 12px 16px; color: white;">
+                    <h3 style="margin: 0; font-size: 1.2rem;">🌍 ${td.destination_name} (${td.country}) — ${td.number_of_days} Day Trip</h3>
+                    <p style="margin: 2px 0 0; font-size: 0.8rem; color: #cbd5e1;">🌤️ Best Time: ${td.best_time || 'October to March'} | 💰 Budget: ₹${td.budget_breakdown ? td.budget_breakdown.total_estimated.toLocaleString() : '10,000'}</p>
+                  </div>
+                </div>
+
+                <!-- Highlights Section -->
+                ${td.highlights && td.highlights.length > 0 ? `
+                  <div style="padding: 14px; background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                    <h4 style="margin: 0 0 8px; font-size: 0.88rem; color: #475569;">📸 Trip Highlights:</h4>
+                    <div style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 6px;">
+                      ${td.highlights.map(h => `
+                        <div style="min-width: 130px; max-width: 130px; background: white; border-radius: 10px; overflow: hidden; border: 1px solid #cbd5e1; flex-shrink: 0;">
+                          <img src="${h.image || '/static/images/placeholder.svg'}" onerror="this.src='/static/images/placeholder.svg'" style="width: 100%; height: 75px; object-fit: cover;" />
+                          <div style="padding: 6px; font-size: 0.75rem;">
+                            <strong style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #1e293b;">${h.name}</strong>
+                            <span style="color: #64748b;">₹${h.cost}</span>
+                          </div>
+                        </div>
+                      `).join('')}
+                    </div>
+                  </div>
+                ` : ''}
+
+                <!-- Day-by-Day Visual Cards -->
+                <div style="padding: 14px;">
+                  <h4 style="margin: 0 0 10px; font-size: 0.9rem; color: #334155;">🗓️ Day-by-Day Visual Itinerary:</h4>
+                  ${td.itinerary.slice(0, 7).map(d => `
+                    <div style="margin-bottom: 12px; background: #f8fafc; border-radius: 12px; padding: 10px; border: 1px solid #e2e8f0;">
+                      <div style="font-weight: 700; font-size: 0.85rem; color: #4f46e5; margin-bottom: 6px;">DAY ${d.day}</div>
+                      
+                      ${d.morning ? `
+                        <div style="display: flex; gap: 10px; margin-bottom: 8px; align-items: center;">
+                          <img src="${d.morning.image || '/static/images/placeholder.svg'}" onerror="this.src='/static/images/placeholder.svg'" style="width: 55px; height: 55px; border-radius: 8px; object-fit: cover;" />
+                          <div style="flex: 1; font-size: 0.8rem;">
+                            <strong style="color: #0f172a;">🌅 Morning: ${d.morning.place || d.morning}</strong>
+                            <p style="margin: 2px 0 0; color: #64748b; font-size: 0.75rem;">${d.morning.description || ''}</p>
+                          </div>
+                        </div>
+                      ` : ''}
+
+                      ${d.afternoon ? `
+                        <div style="display: flex; gap: 10px; margin-bottom: 8px; align-items: center;">
+                          <img src="${d.afternoon.image || '/static/images/placeholder.svg'}" onerror="this.src='/static/images/placeholder.svg'" style="width: 55px; height: 55px; border-radius: 8px; object-fit: cover;" />
+                          <div style="flex: 1; font-size: 0.8rem;">
+                            <strong style="color: #0f172a;">☀️ Afternoon: ${d.afternoon.place || d.afternoon}</strong>
+                            <p style="margin: 2px 0 0; color: #64748b; font-size: 0.75rem;">${d.afternoon.description || ''}</p>
+                          </div>
+                        </div>
+                      ` : ''}
+
+                      ${d.evening ? `
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                          <img src="${d.evening.image || '/static/images/placeholder.svg'}" onerror="this.src='/static/images/placeholder.svg'" style="width: 55px; height: 55px; border-radius: 8px; object-fit: cover;" />
+                          <div style="flex: 1; font-size: 0.8rem;">
+                            <strong style="color: #0f172a;">🌙 Evening: ${d.evening.place || d.evening}</strong>
+                            <p style="margin: 2px 0 0; color: #64748b; font-size: 0.75rem;">${d.evening.description || ''}</p>
+                          </div>
+                        </div>
+                      ` : ''}
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            `;
+          }
+
+          thinkingMsg.innerHTML = `
+            <div class="msg-avatar">🤖</div>
+            <div style="max-width: 90%;">${richHTML}</div>
+          `;
+          chatBox.scrollTop = chatBox.scrollHeight;
+        } catch (err) {
+          console.error("Chat error:", err);
+          thinkingMsg.innerHTML = `
+            <div class="msg-avatar">🤖</div>
+            <div class="msg-bubble" style="color: #ef4444;">Sorry, I couldn't process that request. Please try again.</div>
+          `;
+        } finally {
+          chatInput.disabled = false;
+          sendBtn.disabled = false;
+          sendBtn.textContent = 'Send 🚀';
+          chatInput.focus();
+        }
+      });
+    }
+
+    {% if initial_prompt %}
+    setTimeout(() => {
+      usePrompt("{{ initial_prompt }}");
+    }, 400);
+    {% endif %}
+  </script>
+</body>
+</html>

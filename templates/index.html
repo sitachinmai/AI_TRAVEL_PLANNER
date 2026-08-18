@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Travel Planner — Smart Global Travel Companion</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="/" class="brand">
+        <span class="brand-icon">✨</span> AI Travel Planner
+      </a>
+      <nav class="nav-links">
+        <a href="/dashboard" class="nav-link">Dashboard 🌍</a>
+        <a href="/explore" class="nav-link">Explore 🗺️</a>
+        <a href="/plan-trip" class="nav-link">Plan My Trip ✈️</a>
+        <a href="/profile" class="nav-link">Profile 👤</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-section" style="text-align: center; padding: 4rem 2rem; background: #faf8f5;">
+    <div class="hero-content" style="max-width: 800px; margin: 0 auto;">
+      <div style="margin-bottom: 1.5rem;">
+        <img src="/static/images/cute_globe_mascot.png" alt="Cute AI Travel Mascot" style="max-width: 180px; width: 100%; height: auto; filter: drop-shadow(0 12px 28px rgba(99,102,241,0.2)); border-radius: 50%;" />
+      </div>
+      <h1 class="hero-title" style="font-size: 2.5rem; font-weight: 800; color: #1e293b; margin-bottom: 1rem;">Plan Your Dream Journey Across the World 🌸</h1>
+      <p class="hero-subtitle" style="font-size: 1.15rem; color: #64748b; margin-bottom: 2rem;">Interactive 3D Globe, authentic global travel database across 14 countries & 107 cities, smart AI travel assistant, and personalized itineraries.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="/dashboard" class="btn btn-primary" style="padding: 14px 28px; font-size: 1.05rem; background: #6c5ce7; color: white; border-radius: 12px; text-decoration: none; font-weight: 700;">Open Dashboard 🚀</a>
+        <a href="/explore" class="btn btn-secondary" style="padding: 14px 28px; font-size: 1.05rem; background: #ffffff; border: 1px solid #cbd5e0; color: #4a5568; border-radius: 12px; text-decoration: none; font-weight: 700;">Explore 107 Cities 🗺️</a>
+        <a href="/plan-trip" class="btn btn-secondary" style="padding: 14px 28px; font-size: 1.05rem; background: #ffffff; border: 1px solid #cbd5e0; color: #4a5568; border-radius: 12px; text-decoration: none; font-weight: 700;">Plan My Trip ✈️</a>
+      </div>
+    </div>
+  </section>
+
+  {% include 'footer.html' %}
+</body>
+</html>

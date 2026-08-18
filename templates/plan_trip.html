@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plan My Trip - AI Travel Planner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #faf8f5;
+      color: #2d3748;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background: #ffffff;
+      border-bottom: 1px text-slate-100;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: #4a5568;
+      text-decoration: none;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      border: 1px solid #edf2f7;
+    }
+    .form-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #2d3748;
+      margin-bottom: 0.5rem;
+    }
+    .form-subtitle {
+      color: #718096;
+      margin-bottom: 2rem;
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+    input[type="text"], input[type="number"], input[type="date"], select, textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border-radius: 10px;
+      border: 1px solid #cbd5e0;
+      font-size: 0.95rem;
+      box-sizing: border-box;
+    }
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+    .checkbox-card {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 0.8rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.88rem;
+      background: #f8fafc;
+    }
+    .btn-submit {
+      width: 100%;
+      padding: 1rem;
+      background: #6c5ce7;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-submit:hover {
+      background: #5b4bc4;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #a0aec0;
+      font-size: 0.9rem;
+      border-top: 1px solid #edf2f7;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/dashboard" class="brand">✨ AI Travel Planner</a>
+    <div>
+      <a href="/dashboard" style="margin-right: 1.5rem; text-decoration: none; color: #4a5568; font-weight: 600;">Dashboard</a>
+      <a href="/explore" style="margin-right: 1.5rem; text-decoration: none; color: #4a5568; font-weight: 600;">Explore</a>
+      <a href="/profile" style="text-decoration: none; color: #4a5568; font-weight: 600;">Profile</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 class="form-title">✈️ Plan My Personalized Trip</h1>
+    <p class="form-subtitle">Enter your destination and trip preferences to generate a complete day-by-day itinerary & budget breakdown.</p>
+
+    <form id="planTripForm">
+      <div class="form-group">
+        <label for="destination_name">Destination Name</label>
+        <select id="destination_name" name="destination_name" required>
+          <option value="">Select a Destination...</option>
+          {% for d in destinations %}
+          <option value="{{ d.name }}">{{ d.name }} ({{ d.country }})</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+        <div class="form-group">
+          <label for="number_of_days">Number of Days (1 – 365 Days / Up to 12 Months)</label>
+          <input type="number" id="number_of_days" name="number_of_days" value="3" min="1" max="365" required />
+        </div>
+        <div class="form-group">
+          <label for="number_of_travelers">Number of Travelers</label>
+          <input type="number" id="number_of_travelers" name="number_of_travelers" value="1" min="1" max="20" required />
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+        <div class="form-group">
+          <label for="trip_type">Trip Type</label>
+          <select id="trip_type" name="trip_type">
+            <option value="Solo">Solo</option>
+            <option value="Friends">Friends</option>
+            <option value="Family">Family</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="travel_style">Travel Style</label>
+          <select id="travel_style" name="travel_style">
+            <option value="Budget">Budget</option>
+            <option value="Comfort">Comfort</option>
+            <option value="Premium">Premium</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Interests & Activities</label>
+        <div class="checkbox-grid">
+          <label class="checkbox-card"><input type="checkbox" name="interests" value="Nature" checked /> 🌿 Nature</label>
+          <label class="checkbox-card"><input type="checkbox" name="interests" value="History" checked /> 🏛️ History</label>
+          <label class="checkbox-card"><input type="checkbox" name="interests" value="Culture" /> 🎭 Culture</label>
+          <label class="checkbox-card"><input type="checkbox" name="interests" value="Food" checked /> 🍜 Food</label>
+          <label class="checkbox-card"><input type="checkbox" name="interests" value="Beaches" /> 🏖️ Beaches</label>
+          <label class="checkbox-card"><input type="checkbox" name="interests" value="Mountains" /> 🏔️ Mountains</label>
+          <label class="checkbox-card"><input type="checkbox" name="interests" value="Adventure" /> 🧗 Adventure</label>
+          <label class="checkbox-card"><input type="checkbox" name="interests" value="Shopping" /> 🛍️ Shopping</label>
+          <label class="checkbox-card"><input type="checkbox" name="interests" value="Photography" /> 📸 Photography</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="food_preferences">Food Preferences</label>
+        <select id="food_preferences" name="food_preferences">
+          <option value="Vegetarian">Vegetarian</option>
+          <option value="Non-Vegetarian" selected>Non-Vegetarian</option>
+          <option value="Vegan">Vegan</option>
+          <option value="Local Food">Local Street Food</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="special_requirements">Special Requirements / Notes</label>
+        <textarea id="special_requirements" name="special_requirements" rows="3" placeholder="e.g. Traveling with elderly, relaxed schedule, avoid crowded places..."></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">🚀 Generate & Save Personalized Itinerary</button>
+    </form>
+  </div>
+
+  {% include 'footer.html' %}
+
+  <script>
+    document.getElementById('planTripForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const dest = document.getElementById('destination_name').value;
+      if (!dest) {
+        alert('Please select a destination.');
+        return;
+      }
+
+      const selectedInterests = Array.from(document.querySelectorAll('input[name="interests"]:checked')).map(cb => cb.value);
+
+      const payload = {
+        destination_name: dest,
+        number_of_days: parseInt(document.getElementById('number_of_days').value),
+        number_of_travelers: parseInt(document.getElementById('number_of_travelers').value),
+        trip_type: document.getElementById('trip_type').value,
+        travel_style: document.getElementById('travel_style').value,
+        interests: selectedInterests,
+        food_preferences: document.getElementById('food_preferences').value,
+        special_requirements: document.getElementById('special_requirements').value
+      };
+
+      try {
+        const res = await fetch('/trips', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (res.ok) {
+          alert('✨ Personalized Trip Generated Successfully!');
+          window.location.href = '/dashboard';
+        } else {
+          const data = await res.json();
+          alert('Error: ' + (data.detail || 'Failed to plan trip.'));
+        }
+      } catch (err) {
+        alert('Network error while planning trip.');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+"""
+Trips management service stub.
+"""

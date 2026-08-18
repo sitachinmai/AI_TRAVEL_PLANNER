@@ -1,0 +1,1138 @@
+=== SECTION 1: COUNTRIES IN DATABASE ===
+#,ID,Country Name,Country Code,Continent,Has Image,Where it comes from
+1,1,India,IN,Asia,False,SQLite Database (countries table)
+2,2,Japan,JP,Asia,False,SQLite Database (countries table)
+3,3,France,FR,Europe,False,SQLite Database (countries table)
+4,4,Italy,IT,Europe,False,SQLite Database (countries table)
+5,5,Switzerland,CH,Europe,False,SQLite Database (countries table)
+6,6,UAE,AE,Asia,False,SQLite Database (countries table)
+7,7,Thailand,TH,Asia,False,SQLite Database (countries table)
+8,8,Singapore,SG,Asia,False,SQLite Database (countries table)
+9,9,United Kingdom,GB,Europe,False,SQLite Database (countries table)
+10,10,USA,US,North America,False,SQLite Database (countries table)
+11,11,Australia,AU,Oceania,False,SQLite Database (countries table)
+12,12,Egypt,EG,Africa,False,SQLite Database (countries table)
+13,13,South Africa,ZA,Africa,False,SQLite Database (countries table)
+14,14,Brazil,BR,South America,False,SQLite Database (countries table)
+15,15,South Korea,KR,Asia,False,SQLite Database (countries table)
+16,16,China,CN,Asia,False,SQLite Database (countries table)
+17,17,Vietnam,VN,Asia,False,SQLite Database (countries table)
+18,18,Indonesia,ID,Asia,False,SQLite Database (countries table)
+19,19,Malaysia,MY,Asia,False,SQLite Database (countries table)
+20,20,Philippines,PH,Asia,False,SQLite Database (countries table)
+21,21,Sri Lanka,LK,Asia,False,SQLite Database (countries table)
+22,22,Maldives,MV,Asia,False,SQLite Database (countries table)
+23,23,Saudi Arabia,SA,Asia,False,SQLite Database (countries table)
+24,24,Turkey,TR,Asia,False,SQLite Database (countries table)
+25,25,Spain,ES,Europe,False,SQLite Database (countries table)
+26,26,Germany,DE,Europe,False,SQLite Database (countries table)
+27,27,Netherlands,NL,Europe,False,SQLite Database (countries table)
+28,28,Greece,GR,Europe,False,SQLite Database (countries table)
+29,29,Portugal,PT,Europe,False,SQLite Database (countries table)
+30,30,Canada,CA,North America,False,SQLite Database (countries table)
+31,31,Mexico,MX,North America,False,SQLite Database (countries table)
+32,32,Argentina,AR,South America,False,SQLite Database (countries table)
+33,33,Peru,PE,South America,False,SQLite Database (countries table)
+34,34,Morocco,MA,Africa,False,SQLite Database (countries table)
+35,35,Kenya,KE,Africa,False,SQLite Database (countries table)
+36,36,New Zealand,NZ,Oceania,False,SQLite Database (countries table)
+37,37,Nepal,NP,Asia,False,SQLite Database (countries table)
+38,38,Bhutan,BT,Asia,False,SQLite Database (countries table)
+39,39,Qatar,QA,Asia,False,SQLite Database (countries table)
+40,40,Oman,OM,Asia,False,SQLite Database (countries table)
+41,41,Austria,AT,Europe,False,SQLite Database (countries table)
+42,42,Belgium,BE,Europe,False,SQLite Database (countries table)
+43,43,Norway,NO,Europe,False,SQLite Database (countries table)
+44,44,Sweden,SE,Europe,False,SQLite Database (countries table)
+45,45,Denmark,DK,Europe,False,SQLite Database (countries table)
+46,46,Finland,FI,Europe,False,SQLite Database (countries table)
+47,47,Iceland,IS,Europe,False,SQLite Database (countries table)
+48,48,Ireland,IE,Europe,False,SQLite Database (countries table)
+49,49,Czech Republic,CZ,Europe,False,SQLite Database (countries table)
+50,50,Hungary,HU,Europe,False,SQLite Database (countries table)
+51,51,Poland,PL,Europe,False,SQLite Database (countries table)
+52,52,Croatia,HR,Europe,False,SQLite Database (countries table)
+53,53,Chile,CL,South America,False,SQLite Database (countries table)
+54,54,Colombia,CO,South America,False,SQLite Database (countries table)
+55,55,Tanzania,TZ,Africa,False,SQLite Database (countries table)
+56,56,Mauritius,MU,Africa,False,SQLite Database (countries table)
+57,57,Seychelles,SC,Africa,False,SQLite Database (countries table)
+58,58,Fiji,FJ,Oceania,False,SQLite Database (countries table)
+59,59,Cambodia,KH,Asia,True,SQLite Database (countries table)
+60,60,Laos,LA,Asia,True,SQLite Database (countries table)
+61,61,Myanmar,MM,Asia,True,SQLite Database (countries table)
+62,62,Mongolia,MN,Asia,True,SQLite Database (countries table)
+63,63,Kazakhstan,KZ,Asia,True,SQLite Database (countries table)
+64,64,Uzbekistan,UZ,Asia,True,SQLite Database (countries table)
+65,65,Kyrgyzstan,KG,Asia,True,SQLite Database (countries table)
+66,66,Tajikistan,TJ,Asia,True,SQLite Database (countries table)
+67,67,Turkmenistan,TM,Asia,True,SQLite Database (countries table)
+68,68,Bangladesh,BD,Asia,True,SQLite Database (countries table)
+69,69,Pakistan,PK,Asia,True,SQLite Database (countries table)
+70,70,Taiwan,TW,Asia,True,SQLite Database (countries table)
+71,71,Brunei,BN,Asia,True,SQLite Database (countries table)
+72,72,East Timor,TL,Asia,True,SQLite Database (countries table)
+73,73,Afghanistan,AF,Asia,True,SQLite Database (countries table)
+74,74,Armenia,AM,Asia,True,SQLite Database (countries table)
+75,75,Azerbaijan,AZ,Asia,True,SQLite Database (countries table)
+76,76,Georgia,GE,Asia,True,SQLite Database (countries table)
+77,77,Israel,IL,Asia,True,SQLite Database (countries table)
+78,78,Jordan,JO,Asia,True,SQLite Database (countries table)
+79,79,Lebanon,LB,Asia,True,SQLite Database (countries table)
+80,80,Kuwait,KW,Asia,True,SQLite Database (countries table)
+81,81,Bahrain,BH,Asia,True,SQLite Database (countries table)
+82,82,Iraq,IQ,Asia,True,SQLite Database (countries table)
+83,83,Iran,IR,Asia,True,SQLite Database (countries table)
+84,84,Yemen,YE,Asia,True,SQLite Database (countries table)
+85,85,Syria,SY,Asia,True,SQLite Database (countries table)
+86,86,Albania,AL,Europe,True,SQLite Database (countries table)
+87,87,Andorra,AD,Europe,True,SQLite Database (countries table)
+88,88,Belarus,BY,Europe,True,SQLite Database (countries table)
+89,89,Bosnia & Herzegovina,BA,Europe,True,SQLite Database (countries table)
+90,90,Bulgaria,BG,Europe,True,SQLite Database (countries table)
+91,91,Cyprus,CY,Asia,True,SQLite Database (countries table)
+92,92,Estonia,EE,Europe,True,SQLite Database (countries table)
+93,93,Latvia,LV,Europe,True,SQLite Database (countries table)
+94,94,Lithuania,LT,Europe,True,SQLite Database (countries table)
+95,95,Luxembourg,LU,Europe,True,SQLite Database (countries table)
+96,96,Malta,MT,Europe,True,SQLite Database (countries table)
+97,97,Moldova,MD,Europe,True,SQLite Database (countries table)
+98,98,Monaco,MC,Europe,True,SQLite Database (countries table)
+99,99,Montenegro,ME,Europe,True,SQLite Database (countries table)
+100,100,North Macedonia,MK,Europe,True,SQLite Database (countries table)
+101,101,Romania,RO,Europe,True,SQLite Database (countries table)
+102,102,San Marino,SM,Europe,True,SQLite Database (countries table)
+103,103,Serbia,RS,Europe,True,SQLite Database (countries table)
+104,104,Slovakia,SK,Europe,True,SQLite Database (countries table)
+105,105,Slovenia,SI,Europe,True,SQLite Database (countries table)
+106,106,Ukraine,UA,Europe,True,SQLite Database (countries table)
+107,107,Vatican City,VA,Europe,True,SQLite Database (countries table)
+108,108,Costa Rica,CR,North America,True,SQLite Database (countries table)
+109,109,Cuba,CU,North America,True,SQLite Database (countries table)
+110,110,Dominican Republic,DO,North America,True,SQLite Database (countries table)
+111,111,Jamaica,JM,North America,True,SQLite Database (countries table)
+112,112,Bahamas,BS,North America,True,SQLite Database (countries table)
+113,113,Panama,PA,North America,True,SQLite Database (countries table)
+114,114,Ecuador,EC,South America,True,SQLite Database (countries table)
+115,115,Bolivia,BO,South America,True,SQLite Database (countries table)
+116,116,Uruguay,UY,South America,True,SQLite Database (countries table)
+117,117,Venezuela,VE,South America,True,SQLite Database (countries table)
+118,118,Guatemala,GT,North America,True,SQLite Database (countries table)
+119,119,Belize,BZ,North America,True,SQLite Database (countries table)
+120,120,Barbados,BB,North America,True,SQLite Database (countries table)
+121,121,Trinidad & Tobago,TT,North America,True,SQLite Database (countries table)
+122,122,Haiti,HT,North America,True,SQLite Database (countries table)
+123,123,Honduras,HN,North America,True,SQLite Database (countries table)
+124,124,El Salvador,SV,North America,True,SQLite Database (countries table)
+125,125,Nicaragua,NI,North America,True,SQLite Database (countries table)
+126,126,Paraguay,PY,South America,True,SQLite Database (countries table)
+127,127,Guyana,GY,South America,True,SQLite Database (countries table)
+128,128,Suriname,SR,South America,True,SQLite Database (countries table)
+129,129,Antigua & Barbuda,AG,North America,True,SQLite Database (countries table)
+130,130,Saint Lucia,LC,North America,True,SQLite Database (countries table)
+131,131,Grenada,GD,North America,True,SQLite Database (countries table)
+132,132,Aruba,AW,North America,True,SQLite Database (countries table)
+133,133,Curaçao,CW,North America,True,SQLite Database (countries table)
+134,134,Ethiopia,ET,Africa,True,SQLite Database (countries table)
+135,135,Uganda,UG,Africa,True,SQLite Database (countries table)
+136,136,Rwanda,RW,Africa,True,SQLite Database (countries table)
+137,137,Madagascar,MG,Africa,True,SQLite Database (countries table)
+138,138,Tunisia,TN,Africa,True,SQLite Database (countries table)
+139,139,Algeria,DZ,Africa,True,SQLite Database (countries table)
+140,140,Ghana,GH,Africa,True,SQLite Database (countries table)
+141,141,Nigeria,NG,Africa,True,SQLite Database (countries table)
+142,142,Namibia,NA,Africa,True,SQLite Database (countries table)
+143,143,Botswana,BW,Africa,True,SQLite Database (countries table)
+144,144,Zambia,ZM,Africa,True,SQLite Database (countries table)
+145,145,Zimbabwe,ZW,Africa,True,SQLite Database (countries table)
+146,146,Senegal,SN,Africa,True,SQLite Database (countries table)
+147,147,Ivory Coast,CI,Africa,True,SQLite Database (countries table)
+148,148,Cameroon,CM,Africa,True,SQLite Database (countries table)
+149,149,Angola,AO,Africa,True,SQLite Database (countries table)
+150,150,Cape Verde,CV,Africa,True,SQLite Database (countries table)
+151,151,Mozambique,MZ,Africa,True,SQLite Database (countries table)
+152,152,Malawi,MW,Africa,True,SQLite Database (countries table)
+153,153,Gabon,GA,Africa,True,SQLite Database (countries table)
+154,154,Gambia,GM,Africa,True,SQLite Database (countries table)
+155,155,Sao Tome & Principe,ST,Africa,True,SQLite Database (countries table)
+156,156,Djibouti,DJ,Africa,True,SQLite Database (countries table)
+157,157,Sudan,SD,Africa,True,SQLite Database (countries table)
+158,158,Congo (DRC),CD,Africa,True,SQLite Database (countries table)
+159,159,Somalia,SO,Africa,True,SQLite Database (countries table)
+160,160,Sierra Leone,SL,Africa,True,SQLite Database (countries table)
+161,161,Papua New Guinea,PG,Oceania,True,SQLite Database (countries table)
+162,162,Samoa,WS,Oceania,True,SQLite Database (countries table)
+163,163,Vanuatu,VU,Oceania,True,SQLite Database (countries table)
+164,164,Solomon Islands,SB,Oceania,True,SQLite Database (countries table)
+165,165,Tonga,TO,Oceania,True,SQLite Database (countries table)
+166,166,Palau,PW,Oceania,True,SQLite Database (countries table)
+167,167,Micronesia,FM,Oceania,True,SQLite Database (countries table)
+168,168,Marshall Islands,MH,Oceania,True,SQLite Database (countries table)
+169,169,Kiribati,KI,Oceania,True,SQLite Database (countries table)
+170,170,Tuvalu,TV,Oceania,True,SQLite Database (countries table)
+171,171,Nauru,NR,Oceania,True,SQLite Database (countries table)
+172,172,Cook Islands,CK,Oceania,True,SQLite Database (countries table)
+173,173,Liechtenstein,LI,Europe,True,SQLite Database (countries table)
+174,174,Kosovo,XK,Europe,True,SQLite Database (countries table)
+175,175,Palestine,PS,Asia,True,SQLite Database (countries table)
+176,176,North Korea,KP,Asia,True,SQLite Database (countries table)
+177,177,Dominica,DM,North America,True,SQLite Database (countries table)
+178,178,Saint Kitts & Nevis,KN,North America,True,SQLite Database (countries table)
+179,179,Saint Vincent & Grenadines,VC,North America,True,SQLite Database (countries table)
+180,180,Benin,BJ,Africa,True,SQLite Database (countries table)
+181,181,Burkina Faso,BF,Africa,True,SQLite Database (countries table)
+182,182,Burundi,BI,Africa,True,SQLite Database (countries table)
+183,183,Central African Republic,CF,Africa,True,SQLite Database (countries table)
+184,184,Chad,TD,Africa,True,SQLite Database (countries table)
+185,185,Comoros,KM,Africa,True,SQLite Database (countries table)
+186,186,Congo (Congo-Brazzaville),CG,Africa,True,SQLite Database (countries table)
+187,187,Equatorial Guinea,GQ,Africa,True,SQLite Database (countries table)
+188,188,Eritrea,ER,Africa,True,SQLite Database (countries table)
+189,189,Eswatini,SZ,Africa,True,SQLite Database (countries table)
+190,190,Guinea,GN,Africa,True,SQLite Database (countries table)
+191,191,Guinea-Bissau,GW,Africa,True,SQLite Database (countries table)
+192,192,Lesotho,LS,Africa,True,SQLite Database (countries table)
+193,193,Liberia,LR,Africa,True,SQLite Database (countries table)
+194,194,Libya,LY,Africa,True,SQLite Database (countries table)
+195,195,Mali,ML,Africa,True,SQLite Database (countries table)
+
+=== SECTION 2: CITIES / DESTINATIONS IN DATABASE ===
+#,ID,City/Destination Name,Country,State,Region,Has Image
+1,158,Bariloche,Argentina,Rio Negro,South America,True
+2,157,Buenos Aires,Argentina,Capital Federal,South America,True
+3,92,Adelaide,Australia,South Australia,Oceania,True
+4,90,Brisbane,Australia,Queensland,Oceania,True
+5,94,Cairns,Australia,Queensland,Oceania,True
+6,93,Gold Coast,Australia,Queensland,Oceania,True
+7,89,Melbourne,Australia,Victoria,Oceania,True
+8,91,Perth,Australia,Western Australia,Oceania,True
+9,88,Sydney,Australia,New South Wales,Oceania,True
+10,175,Salzburg,Austria,Salzburg,Central Europe,True
+11,174,Vienna,Austria,Vienna,Central Europe,True
+12,177,Bruges,Belgium,Flanders,Western Europe,True
+13,176,Brussels,Belgium,Brussels,Western Europe,True
+14,170,Paro,Bhutan,Paro,South Asia,True
+15,169,Thimphu,Bhutan,Thimphu,South Asia,True
+16,107,Brasilia,Brazil,Federal District,South America,True
+17,104,Rio de Janeiro,Brazil,Rio de Janeiro,South America,True
+18,106,Salvador,Brazil,Bahia,South America,True
+19,105,Sao Paulo,Brazil,Sao Paulo,South America,True
+20,154,Montreal,Canada,Quebec,North America,True
+21,152,Toronto,Canada,Ontario,North America,True
+22,153,Vancouver,Canada,British Columbia,North America,True
+23,192,Santiago,Chile,Santiago Metropolitan,South America,True
+24,111,Beijing,China,Beijing,East Asia,True
+25,114,Chengdu,China,Sichuan,East Asia,True
+26,112,Shanghai,China,Shanghai,East Asia,True
+27,113,Xi'an,China,Shaanxi,East Asia,True
+28,194,Bogota,Colombia,Cundinamarca,South America,True
+29,193,Cartagena,Colombia,Bolívar,South America,True
+30,190,Dubrovnik,Croatia,Dubrovnik-Neretva,Southern Europe,True
+31,191,Split,Croatia,Split-Dalmatia,Southern Europe,True
+32,186,Prague,Czech Republic,Prague,Central Europe,True
+33,181,Copenhagen,Denmark,Capital Region,Northern Europe,True
+34,97,Alexandria,Egypt,Alexandria,North Africa,True
+35,95,Cairo,Egypt,Cairo,North Africa,True
+36,96,Luxor,Egypt,Luxor,North Africa,True
+37,98,Sharm El Sheikh,Egypt,South Sinai,North Africa,True
+38,198,Nadi,Fiji,Western Division,Oceania,True
+39,182,Helsinki,Finland,Uusimaa,Northern Europe,True
+40,183,Rovaniemi,Finland,Lapland,Northern Europe,True
+41,50,Bordeaux,France,Nouvelle-Aquitaine,Western Europe,True
+42,52,Cannes,France,Provence-Alpes-Côte d'Azur,Western Europe,True
+43,48,Lyon,France,Auvergne-Rhône-Alpes,Western Europe,True
+44,49,Marseille,France,Provence-Alpes-Côte d'Azur,Western Europe,True
+45,47,Nice,France,Provence-Alpes-Côte d'Azur,Western Europe,True
+46,10,Paris,France,Île-de-France,Western Europe,True
+47,51,Strasbourg,France,Grand Est,Western Europe,True
+48,142,Berlin,Germany,Berlin,Central Europe,True
+49,144,Frankfurt,Germany,Hesse,Central Europe,True
+50,143,Munich,Germany,Bavaria,Central Europe,True
+51,147,Athens,Greece,Attica,Southern Europe,True
+52,149,Mykonos,Greece,South Aegean,Southern Europe,True
+53,148,Santorini,Greece,South Aegean,Southern Europe,True
+54,187,Budapest,Hungary,Central Hungary,Central Europe,True
+55,184,Reykjavik,Iceland,Capital Region,Northern Europe,True
+56,2,Agra,India,Uttar Pradesh,North,True
+57,33,Ahmedabad,India,Gujarat,West,True
+58,37,Amalapuram,India,Andhra Pradesh,South,True
+59,23,Amritsar,India,Punjab,North,True
+60,40,Araku Valley,India,Andhra Pradesh,South,True
+61,5,Bengaluru,India,Karnataka,South,True
+62,35,Bhubaneswar,India,Odisha,East,True
+63,18,Chennai,India,Tamil Nadu,South,True
+64,1,Delhi,India,Delhi,North,True
+65,4,Goa,India,Goa,South,True
+66,6,Hyderabad,India,Telangana,South,True
+67,3,Jaipur,India,Rajasthan,North,True
+68,22,Jodhpur,India,Rajasthan,North,True
+69,28,Kochi,India,Kerala,South,True
+70,19,Kolkata,India,West Bengal,East,True
+71,25,Manali,India,Himachal Pradesh,North,True
+72,7,Mumbai,India,Maharashtra,West,True
+73,29,Munnar,India,Kerala,South,True
+74,31,Mysuru,India,Karnataka,South,True
+75,30,Ooty,India,Tamil Nadu,South,True
+76,32,Pune,India,Maharashtra,West,True
+77,24,Rishikesh,India,Uttarakhand,North,True
+78,26,Shimla,India,Himachal Pradesh,North,True
+79,27,Srinagar,India,Jammu & Kashmir,North,True
+80,34,Surat,India,Gujarat,West,True
+81,38,Tirupati,India,Andhra Pradesh,South,True
+82,21,Udaipur,India,Rajasthan,North,True
+83,20,Varanasi,India,Uttar Pradesh,North,True
+84,39,Vijayawada,India,Andhra Pradesh,South,True
+85,36,Visakhapatnam,India,Andhra Pradesh,South,True
+86,119,Bali,Indonesia,Bali,Southeast Asia,True
+87,120,Jakarta,Indonesia,Java,Southeast Asia,True
+88,121,Yogyakarta,Indonesia,Java,Southeast Asia,True
+89,185,Dublin,Ireland,Leinster,Western Europe,True
+90,57,Amalfi,Italy,Campania,Southern Europe,True
+91,55,Florence,Italy,Tuscany,Southern Europe,True
+92,54,Milan,Italy,Lombardy,Southern Europe,True
+93,56,Naples,Italy,Campania,Southern Europe,True
+94,58,Pisa,Italy,Tuscany,Southern Europe,True
+95,11,Rome,Italy,Lazio,Southern Europe,True
+96,53,Venice,Italy,Veneto,Southern Europe,True
+97,45,Fukuoka,Japan,Kyushu,East Asia,True
+98,42,Hiroshima,Japan,Chugoku,East Asia,True
+99,9,Kyoto,Japan,Kansai,East Asia,True
+100,43,Nara,Japan,Kansai,East Asia,True
+101,46,Okinawa,Japan,Okinawa,East Asia,True
+102,41,Osaka,Japan,Kansai,East Asia,True
+103,44,Sapporo,Japan,Hokkaido,East Asia,True
+104,8,Tokyo,Japan,Kanto,East Asia,True
+105,164,Mombasa,Kenya,Coast Province,East Africa,True
+106,163,Nairobi,Kenya,Nairobi,East Africa,True
+107,122,Kuala Lumpur,Malaysia,Federal Territory,Southeast Asia,True
+108,124,Langkawi,Malaysia,Kedah,Southeast Asia,True
+109,123,Penang,Malaysia,Penang,Southeast Asia,True
+110,132,Maafushi,Maldives,Kaafu Atoll,South Asia,True
+111,131,Male,Maldives,Kaafu Atoll,South Asia,True
+112,196,Port Louis,Mauritius,Black River / Port Louis,East Africa,True
+113,156,Cancun,Mexico,Quintana Roo,North America,True
+114,155,Mexico City,Mexico,CDMX,North America,True
+115,162,Casablanca,Morocco,Casablanca-Settat,North Africa,True
+116,161,Marrakech,Morocco,Marrakesh-Safi,North Africa,True
+117,167,Kathmandu,Nepal,Bagmati,South Asia,True
+118,168,Pokhara,Nepal,Gandaki,South Asia,True
+119,145,Amsterdam,Netherlands,North Holland,Western Europe,True
+120,146,Rotterdam,Netherlands,South Holland,Western Europe,True
+121,165,Auckland,New Zealand,North Island,Oceania,True
+122,166,Queenstown,New Zealand,South Island,Oceania,True
+123,179,Bergen,Norway,Vestland,Northern Europe,True
+124,178,Oslo,Norway,Oslo,Northern Europe,True
+125,172,Muscat,Oman,Muscat,Middle East,True
+126,173,Salalah,Oman,Dhofar,Middle East,True
+127,159,Cusco,Peru,Cusco,South America,True
+128,160,Lima,Peru,Lima,South America,True
+129,126,Boracay,Philippines,Aklan,Southeast Asia,True
+130,127,El Nido,Philippines,Palawan,Southeast Asia,True
+131,125,Manila,Philippines,Luzon,Southeast Asia,True
+132,188,Krakow,Poland,Lesser Poland,Central Europe,True
+133,189,Warsaw,Poland,Masovian,Central Europe,True
+134,150,Lisbon,Portugal,Lisbon District,Southern Europe,True
+135,151,Porto,Portugal,Porto District,Southern Europe,True
+136,171,Doha,Qatar,Doha,Middle East,True
+137,135,Al-Ula,Saudi Arabia,Madinah Region,Middle East,True
+138,134,Jeddah,Saudi Arabia,Makkah Region,Middle East,True
+139,133,Riyadh,Saudi Arabia,Riyadh,Middle East,True
+140,197,Mahé,Seychelles,Greater Victoria,East Africa,True
+141,15,Singapore City,Singapore,Singapore,Southeast Asia,True
+142,99,Cape Town,South Africa,Western Cape,Southern Africa,True
+143,101,Durban,South Africa,KwaZulu-Natal,Southern Africa,True
+144,100,Johannesburg,South Africa,Gauteng,Southern Africa,True
+145,103,Kruger National Park,South Africa,Mpumalanga,Southern Africa,True
+146,102,Pretoria,South Africa,Gauteng,Southern Africa,True
+147,109,Busan,South Korea,Busan,East Asia,True
+148,110,Jeju Island,South Korea,Jeju,East Asia,True
+149,108,Seoul,South Korea,Seoul,East Asia,True
+150,139,Barcelona,Spain,Catalonia,Southern Europe,True
+151,140,Madrid,Spain,Community of Madrid,Southern Europe,True
+152,141,Seville,Spain,Andalusia,Southern Europe,True
+153,128,Colombo,Sri Lanka,Western Province,South Asia,True
+154,130,Galle,Sri Lanka,Southern Province,South Asia,True
+155,129,Kandy,Sri Lanka,Central Province,South Asia,True
+156,180,Stockholm,Sweden,Stockholm,Northern Europe,True
+157,62,Bern,Switzerland,Bern,Central Europe,True
+158,59,Geneva,Switzerland,Geneva,Central Europe,True
+159,61,Interlaken,Switzerland,Bern,Central Europe,True
+160,60,Lucerne,Switzerland,Lucerne,Central Europe,True
+161,63,Zermatt,Switzerland,Valais,Central Europe,True
+162,12,Zurich,Switzerland,Zurich,Central Europe,True
+163,195,Zanzibar,Tanzania,Zanzibar Urban/West,East Africa,True
+164,14,Bangkok,Thailand,Bangkok,Southeast Asia,True
+165,84,Chiang Mai,Thailand,Chiang Mai,Southeast Asia,True
+166,87,Koh Samui,Thailand,Surat Thani,Southeast Asia,True
+167,86,Krabi,Thailand,Krabi,Southeast Asia,True
+168,85,Pattaya,Thailand,Chonburi,Southeast Asia,True
+169,83,Phuket,Thailand,Phuket,Southeast Asia,True
+170,138,Antalya,Turkey,Antalya,Southern Europe,True
+171,137,Cappadocia,Turkey,Nevsehir,Southern Europe,True
+172,136,Istanbul,Turkey,Marmara,Southern Europe,True
+173,80,Abu Dhabi,UAE,Abu Dhabi,Middle East,True
+174,13,Dubai,UAE,Dubai,Middle East,True
+175,82,Ras Al Khaimah,UAE,Ras Al Khaimah,Middle East,True
+176,81,Sharjah,UAE,Sharjah,Middle East,True
+177,77,Boston,USA,Massachusetts,North America,True
+178,73,Chicago,USA,Illinois,North America,True
+179,79,Honolulu,USA,Hawaii,North America,True
+180,72,Las Vegas,USA,Nevada,North America,True
+181,70,Los Angeles,USA,California,North America,True
+182,74,Miami,USA,Florida,North America,True
+183,17,New York City,USA,New York,North America,True
+184,75,Orlando,USA,Florida,North America,True
+185,71,San Francisco,USA,California,North America,True
+186,76,Seattle,USA,Washington,North America,True
+187,78,Washington DC,USA,District of Columbia,North America,True
+188,67,Bath,United Kingdom,England,Western Europe,True
+189,69,Cambridge,United Kingdom,England,Western Europe,True
+190,64,Edinburgh,United Kingdom,Scotland,Western Europe,True
+191,66,Liverpool,United Kingdom,England,Western Europe,True
+192,16,London,United Kingdom,England,Western Europe,True
+193,65,Manchester,United Kingdom,England,Western Europe,True
+194,68,Oxford,United Kingdom,England,Western Europe,True
+195,117,Da Nang,Vietnam,Central Vietnam,Southeast Asia,True
+196,115,Hanoi,Vietnam,Hanoi,Southeast Asia,True
+197,116,Ho Chi Minh City,Vietnam,Southern Vietnam,Southeast Asia,True
+198,118,Hoi An,Vietnam,Quang Nam,Southeast Asia,True
+
+=== SECTION 3: FOOD & LOCAL DISHES IN DATABASE ===
+#,ID,Country,City,Dish / Food Name,Category,Eatery / Restaurant,Has Description,Has Image,Source Table
+1,LF-2,India,Agra,Agra Petha,Sweets,,True,True,local_foods
+2,LF-3,India,Jaipur,Dal Baati Churma,Traditional,,True,True,local_foods
+3,LF-4,India,Goa,Goan Fish Curry,Seafood,,True,True,local_foods
+4,LF-5,India,Bengaluru,Benne Dosa,Breakfast,,True,True,local_foods
+5,LF-6,India,Hyderabad,Hyderabadi Dum Biryani,Main Course,,True,True,local_foods
+6,LF-7,India,Mumbai,Vada Pav,Street Food,,True,True,local_foods
+7,LF-8,Japan,Tokyo,Tokyo Tonkotsu Ramen,Noodles,,True,True,local_foods
+8,LF-9,Japan,Kyoto,Matcha Sweets,Dessert,,True,True,local_foods
+9,LF-10,France,Paris,Butter Croissant,Bakery,,True,True,local_foods
+10,LF-11,Italy,Rome,Roman Gelato,Dessert,,True,True,local_foods
+11,LF-12,Switzerland,Zurich,Swiss Cheese Fondue,Traditional,,True,True,local_foods
+12,LF-13,UAE,Dubai,Shawarma & Luqaimat,Street Food,,True,True,local_foods
+13,LF-14,Thailand,Bangkok,Pad Thai,Street Food,,True,True,local_foods
+14,LF-15,Singapore,Singapore City,Hainanese Chicken Rice,Hawker Classic,,True,True,local_foods
+15,LF-16,United Kingdom,London,Fish & Chips,Classic,,True,True,local_foods
+16,LF-17,USA,New York City,New York Style Pizza,Street Food,,True,True,local_foods
+17,LF-18,India,Chennai,Famous Chennai Delicacy,Local Food,,True,True,local_foods
+18,LF-19,India,Kolkata,Famous Kolkata Delicacy,Local Food,,True,True,local_foods
+19,LF-20,India,Varanasi,Famous Varanasi Delicacy,Local Food,,True,True,local_foods
+20,LF-21,India,Udaipur,Famous Udaipur Delicacy,Local Food,,True,True,local_foods
+21,LF-22,India,Jodhpur,Famous Jodhpur Delicacy,Local Food,,True,True,local_foods
+22,LF-23,India,Amritsar,Famous Amritsar Delicacy,Local Food,,True,True,local_foods
+23,LF-24,India,Rishikesh,Famous Rishikesh Delicacy,Local Food,,True,True,local_foods
+24,LF-25,India,Manali,Famous Manali Delicacy,Local Food,,True,True,local_foods
+25,LF-26,India,Shimla,Famous Shimla Delicacy,Local Food,,True,True,local_foods
+26,LF-27,India,Srinagar,Famous Srinagar Delicacy,Local Food,,True,True,local_foods
+27,LF-28,India,Kochi,Famous Kochi Delicacy,Local Food,,True,True,local_foods
+28,LF-29,India,Munnar,Famous Munnar Delicacy,Local Food,,True,True,local_foods
+29,LF-30,India,Ooty,Famous Ooty Delicacy,Local Food,,True,True,local_foods
+30,LF-31,India,Mysuru,Famous Mysuru Delicacy,Local Food,,True,True,local_foods
+31,LF-32,India,Pune,Famous Pune Delicacy,Local Food,,True,True,local_foods
+32,LF-33,India,Ahmedabad,Famous Ahmedabad Delicacy,Local Food,,True,True,local_foods
+33,LF-34,India,Surat,Famous Surat Delicacy,Local Food,,True,True,local_foods
+34,LF-35,India,Bhubaneswar,Famous Bhubaneswar Delicacy,Local Food,,True,True,local_foods
+35,LF-36,India,Visakhapatnam,Famous Visakhapatnam Delicacy,Local Food,,True,True,local_foods
+36,LF-37,India,Amalapuram,Famous Amalapuram Delicacy,Local Food,,True,True,local_foods
+37,LF-38,India,Tirupati,Famous Tirupati Delicacy,Local Food,,True,True,local_foods
+38,LF-39,India,Vijayawada,Famous Vijayawada Delicacy,Local Food,,True,True,local_foods
+39,LF-40,India,Araku Valley,Famous Araku Valley Delicacy,Local Food,,True,True,local_foods
+40,LF-41,Japan,Osaka,Famous Osaka Delicacy,Local Food,,True,True,local_foods
+41,LF-42,Japan,Hiroshima,Famous Hiroshima Delicacy,Local Food,,True,True,local_foods
+42,LF-43,Japan,Nara,Famous Nara Delicacy,Local Food,,True,True,local_foods
+43,LF-44,Japan,Sapporo,Famous Sapporo Delicacy,Local Food,,True,True,local_foods
+44,LF-45,Japan,Fukuoka,Famous Fukuoka Delicacy,Local Food,,True,True,local_foods
+45,LF-46,Japan,Okinawa,Famous Okinawa Delicacy,Local Food,,True,True,local_foods
+46,LF-47,France,Nice,Famous Nice Delicacy,Local Food,,True,True,local_foods
+47,LF-48,France,Lyon,Famous Lyon Delicacy,Local Food,,True,True,local_foods
+48,LF-49,France,Marseille,Famous Marseille Delicacy,Local Food,,True,True,local_foods
+49,LF-50,France,Bordeaux,Famous Bordeaux Delicacy,Local Food,,True,True,local_foods
+50,LF-51,France,Strasbourg,Famous Strasbourg Delicacy,Local Food,,True,True,local_foods
+51,LF-52,France,Cannes,Famous Cannes Delicacy,Local Food,,True,True,local_foods
+52,LF-53,Italy,Venice,Famous Venice Delicacy,Local Food,,True,True,local_foods
+53,LF-54,Italy,Milan,Famous Milan Delicacy,Local Food,,True,True,local_foods
+54,LF-55,Italy,Florence,Famous Florence Delicacy,Local Food,,True,True,local_foods
+55,LF-56,Italy,Naples,Famous Naples Delicacy,Local Food,,True,True,local_foods
+56,LF-57,Italy,Amalfi,Famous Amalfi Delicacy,Local Food,,True,True,local_foods
+57,LF-58,Italy,Pisa,Famous Pisa Delicacy,Local Food,,True,True,local_foods
+58,LF-59,Switzerland,Geneva,Famous Geneva Delicacy,Local Food,,True,True,local_foods
+59,LF-60,Switzerland,Lucerne,Famous Lucerne Delicacy,Local Food,,True,True,local_foods
+60,LF-61,Switzerland,Interlaken,Famous Interlaken Delicacy,Local Food,,True,True,local_foods
+61,LF-62,Switzerland,Bern,Famous Bern Delicacy,Local Food,,True,True,local_foods
+62,LF-63,Switzerland,Zermatt,Famous Zermatt Delicacy,Local Food,,True,True,local_foods
+63,LF-64,United Kingdom,Edinburgh,Famous Edinburgh Delicacy,Local Food,,True,True,local_foods
+64,LF-65,United Kingdom,Manchester,Famous Manchester Delicacy,Local Food,,True,True,local_foods
+65,LF-66,United Kingdom,Liverpool,Famous Liverpool Delicacy,Local Food,,True,True,local_foods
+66,LF-67,United Kingdom,Bath,Famous Bath Delicacy,Local Food,,True,True,local_foods
+67,LF-68,United Kingdom,Oxford,Famous Oxford Delicacy,Local Food,,True,True,local_foods
+68,LF-69,United Kingdom,Cambridge,Famous Cambridge Delicacy,Local Food,,True,True,local_foods
+69,LF-70,USA,Los Angeles,Famous Los Angeles Delicacy,Local Food,,True,True,local_foods
+70,LF-71,USA,San Francisco,Famous San Francisco Delicacy,Local Food,,True,True,local_foods
+71,LF-72,USA,Las Vegas,Famous Las Vegas Delicacy,Local Food,,True,True,local_foods
+72,LF-73,USA,Chicago,Famous Chicago Delicacy,Local Food,,True,True,local_foods
+73,LF-74,USA,Miami,Famous Miami Delicacy,Local Food,,True,True,local_foods
+74,LF-75,USA,Orlando,Famous Orlando Delicacy,Local Food,,True,True,local_foods
+75,LF-76,USA,Seattle,Famous Seattle Delicacy,Local Food,,True,True,local_foods
+76,LF-77,USA,Boston,Famous Boston Delicacy,Local Food,,True,True,local_foods
+77,LF-78,USA,Washington DC,Famous Washington DC Delicacy,Local Food,,True,True,local_foods
+78,LF-79,USA,Honolulu,Famous Honolulu Delicacy,Local Food,,True,True,local_foods
+79,LF-80,UAE,Abu Dhabi,Famous Abu Dhabi Delicacy,Local Food,,True,True,local_foods
+80,LF-81,UAE,Sharjah,Famous Sharjah Delicacy,Local Food,,True,True,local_foods
+81,LF-82,UAE,Ras Al Khaimah,Famous Ras Al Khaimah Delicacy,Local Food,,True,True,local_foods
+82,LF-83,Thailand,Phuket,Famous Phuket Delicacy,Local Food,,True,True,local_foods
+83,LF-84,Thailand,Chiang Mai,Famous Chiang Mai Delicacy,Local Food,,True,True,local_foods
+84,LF-85,Thailand,Pattaya,Famous Pattaya Delicacy,Local Food,,True,True,local_foods
+85,LF-86,Thailand,Krabi,Famous Krabi Delicacy,Local Food,,True,True,local_foods
+86,LF-87,Thailand,Koh Samui,Famous Koh Samui Delicacy,Local Food,,True,True,local_foods
+87,LF-88,Australia,Sydney,Famous Sydney Delicacy,Local Food,,True,True,local_foods
+88,LF-89,Australia,Melbourne,Famous Melbourne Delicacy,Local Food,,True,True,local_foods
+89,LF-90,Australia,Brisbane,Famous Brisbane Delicacy,Local Food,,True,True,local_foods
+90,LF-91,Australia,Perth,Famous Perth Delicacy,Local Food,,True,True,local_foods
+91,LF-92,Australia,Adelaide,Famous Adelaide Delicacy,Local Food,,True,True,local_foods
+92,LF-93,Australia,Gold Coast,Famous Gold Coast Delicacy,Local Food,,True,True,local_foods
+93,LF-94,Australia,Cairns,Famous Cairns Delicacy,Local Food,,True,True,local_foods
+94,LF-95,Egypt,Cairo,Famous Cairo Delicacy,Local Food,,True,True,local_foods
+95,LF-96,Egypt,Luxor,Famous Luxor Delicacy,Local Food,,True,True,local_foods
+96,LF-97,Egypt,Alexandria,Famous Alexandria Delicacy,Local Food,,True,True,local_foods
+97,LF-98,Egypt,Sharm El Sheikh,Famous Sharm El Sheikh Delicacy,Local Food,,True,True,local_foods
+98,LF-99,South Africa,Cape Town,Famous Cape Town Delicacy,Local Food,,True,True,local_foods
+99,LF-100,South Africa,Johannesburg,Famous Johannesburg Delicacy,Local Food,,True,True,local_foods
+100,LF-101,South Africa,Durban,Famous Durban Delicacy,Local Food,,True,True,local_foods
+101,LF-102,South Africa,Pretoria,Famous Pretoria Delicacy,Local Food,,True,True,local_foods
+102,LF-103,South Africa,Kruger National Park,Famous Kruger National Park Delicacy,Local Food,,True,True,local_foods
+103,LF-104,Brazil,Rio de Janeiro,Famous Rio de Janeiro Delicacy,Local Food,,True,True,local_foods
+104,LF-105,Brazil,Sao Paulo,Famous Sao Paulo Delicacy,Local Food,,True,True,local_foods
+105,LF-106,Brazil,Salvador,Famous Salvador Delicacy,Local Food,,True,True,local_foods
+106,LF-107,Brazil,Brasilia,Famous Brasilia Delicacy,Local Food,,True,True,local_foods
+107,LF-108,South Korea,Seoul,Traditional Seoul Specialty,Local Food,,True,True,local_foods
+108,LF-109,South Korea,Busan,Traditional Busan Specialty,Local Food,,True,True,local_foods
+109,LF-110,South Korea,Jeju Island,Traditional Jeju Island Specialty,Local Food,,True,True,local_foods
+110,LF-111,China,Beijing,Traditional Beijing Specialty,Local Food,,True,True,local_foods
+111,LF-112,China,Shanghai,Traditional Shanghai Specialty,Local Food,,True,True,local_foods
+112,LF-113,China,Xi'an,Traditional Xi'an Specialty,Local Food,,True,True,local_foods
+113,LF-114,China,Chengdu,Traditional Chengdu Specialty,Local Food,,True,True,local_foods
+114,LF-115,Vietnam,Hanoi,Traditional Hanoi Specialty,Local Food,,True,True,local_foods
+115,LF-116,Vietnam,Ho Chi Minh City,Traditional Ho Chi Minh City Specialty,Local Food,,True,True,local_foods
+116,LF-117,Vietnam,Da Nang,Traditional Da Nang Specialty,Local Food,,True,True,local_foods
+117,LF-118,Vietnam,Hoi An,Traditional Hoi An Specialty,Local Food,,True,True,local_foods
+118,LF-119,Indonesia,Bali,Traditional Bali Specialty,Local Food,,True,True,local_foods
+119,LF-120,Indonesia,Jakarta,Traditional Jakarta Specialty,Local Food,,True,True,local_foods
+120,LF-121,Indonesia,Yogyakarta,Traditional Yogyakarta Specialty,Local Food,,True,True,local_foods
+121,LF-122,Malaysia,Kuala Lumpur,Traditional Kuala Lumpur Specialty,Local Food,,True,True,local_foods
+122,LF-123,Malaysia,Penang,Traditional Penang Specialty,Local Food,,True,True,local_foods
+123,LF-124,Malaysia,Langkawi,Traditional Langkawi Specialty,Local Food,,True,True,local_foods
+124,LF-125,Philippines,Manila,Traditional Manila Specialty,Local Food,,True,True,local_foods
+125,LF-126,Philippines,Boracay,Traditional Boracay Specialty,Local Food,,True,True,local_foods
+126,LF-127,Philippines,El Nido,Traditional El Nido Specialty,Local Food,,True,True,local_foods
+127,LF-128,Sri Lanka,Colombo,Traditional Colombo Specialty,Local Food,,True,True,local_foods
+128,LF-129,Sri Lanka,Kandy,Traditional Kandy Specialty,Local Food,,True,True,local_foods
+129,LF-130,Sri Lanka,Galle,Traditional Galle Specialty,Local Food,,True,True,local_foods
+130,LF-131,Maldives,Male,Traditional Male Specialty,Local Food,,True,True,local_foods
+131,LF-132,Maldives,Maafushi,Traditional Maafushi Specialty,Local Food,,True,True,local_foods
+132,LF-133,Saudi Arabia,Riyadh,Traditional Riyadh Specialty,Local Food,,True,True,local_foods
+133,LF-134,Saudi Arabia,Jeddah,Traditional Jeddah Specialty,Local Food,,True,True,local_foods
+134,LF-135,Saudi Arabia,Al-Ula,Traditional Al-Ula Specialty,Local Food,,True,True,local_foods
+135,LF-136,Turkey,Istanbul,Traditional Istanbul Specialty,Local Food,,True,True,local_foods
+136,LF-137,Turkey,Cappadocia,Traditional Cappadocia Specialty,Local Food,,True,True,local_foods
+137,LF-138,Turkey,Antalya,Traditional Antalya Specialty,Local Food,,True,True,local_foods
+138,LF-139,Spain,Barcelona,Traditional Barcelona Specialty,Local Food,,True,True,local_foods
+139,LF-140,Spain,Madrid,Traditional Madrid Specialty,Local Food,,True,True,local_foods
+140,LF-141,Spain,Seville,Traditional Seville Specialty,Local Food,,True,True,local_foods
+141,LF-142,Germany,Berlin,Traditional Berlin Specialty,Local Food,,True,True,local_foods
+142,LF-143,Germany,Munich,Traditional Munich Specialty,Local Food,,True,True,local_foods
+143,LF-144,Germany,Frankfurt,Traditional Frankfurt Specialty,Local Food,,True,True,local_foods
+144,LF-145,Netherlands,Amsterdam,Traditional Amsterdam Specialty,Local Food,,True,True,local_foods
+145,LF-146,Netherlands,Rotterdam,Traditional Rotterdam Specialty,Local Food,,True,True,local_foods
+146,LF-147,Greece,Athens,Traditional Athens Specialty,Local Food,,True,True,local_foods
+147,LF-148,Greece,Santorini,Traditional Santorini Specialty,Local Food,,True,True,local_foods
+148,LF-149,Greece,Mykonos,Traditional Mykonos Specialty,Local Food,,True,True,local_foods
+149,LF-150,Portugal,Lisbon,Traditional Lisbon Specialty,Local Food,,True,True,local_foods
+150,LF-151,Portugal,Porto,Traditional Porto Specialty,Local Food,,True,True,local_foods
+151,LF-152,Canada,Toronto,Traditional Toronto Specialty,Local Food,,True,True,local_foods
+152,LF-153,Canada,Vancouver,Traditional Vancouver Specialty,Local Food,,True,True,local_foods
+153,LF-154,Canada,Montreal,Traditional Montreal Specialty,Local Food,,True,True,local_foods
+154,LF-155,Mexico,Mexico City,Traditional Mexico City Specialty,Local Food,,True,True,local_foods
+155,LF-156,Mexico,Cancun,Traditional Cancun Specialty,Local Food,,True,True,local_foods
+156,LF-157,Argentina,Buenos Aires,Traditional Buenos Aires Specialty,Local Food,,True,True,local_foods
+157,LF-158,Argentina,Bariloche,Traditional Bariloche Specialty,Local Food,,True,True,local_foods
+158,LF-159,Peru,Cusco,Traditional Cusco Specialty,Local Food,,True,True,local_foods
+159,LF-160,Peru,Lima,Traditional Lima Specialty,Local Food,,True,True,local_foods
+160,LF-161,Morocco,Marrakech,Traditional Marrakech Specialty,Local Food,,True,True,local_foods
+161,LF-162,Morocco,Casablanca,Traditional Casablanca Specialty,Local Food,,True,True,local_foods
+162,LF-163,Kenya,Nairobi,Traditional Nairobi Specialty,Local Food,,True,True,local_foods
+163,LF-164,Kenya,Mombasa,Traditional Mombasa Specialty,Local Food,,True,True,local_foods
+164,LF-165,New Zealand,Auckland,Traditional Auckland Specialty,Local Food,,True,True,local_foods
+165,LF-166,New Zealand,Queenstown,Traditional Queenstown Specialty,Local Food,,True,True,local_foods
+166,LF-167,Nepal,Kathmandu,Kathmandu Delicacy,Local Food,,True,True,local_foods
+167,LF-168,Nepal,Pokhara,Pokhara Delicacy,Local Food,,True,True,local_foods
+168,LF-169,Bhutan,Thimphu,Thimphu Delicacy,Local Food,,True,True,local_foods
+169,LF-170,Bhutan,Paro,Paro Delicacy,Local Food,,True,True,local_foods
+170,LF-171,Qatar,Doha,Doha Delicacy,Local Food,,True,True,local_foods
+171,LF-172,Oman,Muscat,Muscat Delicacy,Local Food,,True,True,local_foods
+172,LF-173,Oman,Salalah,Salalah Delicacy,Local Food,,True,True,local_foods
+173,LF-174,Austria,Vienna,Vienna Delicacy,Local Food,,True,True,local_foods
+174,LF-175,Austria,Salzburg,Salzburg Delicacy,Local Food,,True,True,local_foods
+175,LF-176,Belgium,Brussels,Brussels Delicacy,Local Food,,True,True,local_foods
+176,LF-177,Belgium,Bruges,Bruges Delicacy,Local Food,,True,True,local_foods
+177,LF-178,Norway,Oslo,Oslo Delicacy,Local Food,,True,True,local_foods
+178,LF-179,Norway,Bergen,Bergen Delicacy,Local Food,,True,True,local_foods
+179,LF-180,Sweden,Stockholm,Stockholm Delicacy,Local Food,,True,True,local_foods
+180,LF-181,Denmark,Copenhagen,Copenhagen Delicacy,Local Food,,True,True,local_foods
+181,LF-182,Finland,Helsinki,Helsinki Delicacy,Local Food,,True,True,local_foods
+182,LF-183,Finland,Rovaniemi,Rovaniemi Delicacy,Local Food,,True,True,local_foods
+183,LF-184,Iceland,Reykjavik,Reykjavik Delicacy,Local Food,,True,True,local_foods
+184,LF-185,Ireland,Dublin,Dublin Delicacy,Local Food,,True,True,local_foods
+185,LF-186,Czech Republic,Prague,Prague Delicacy,Local Food,,True,True,local_foods
+186,LF-187,Hungary,Budapest,Budapest Delicacy,Local Food,,True,True,local_foods
+187,LF-188,Poland,Krakow,Krakow Delicacy,Local Food,,True,True,local_foods
+188,LF-189,Poland,Warsaw,Warsaw Delicacy,Local Food,,True,True,local_foods
+189,LF-190,Croatia,Dubrovnik,Dubrovnik Delicacy,Local Food,,True,True,local_foods
+190,LF-191,Croatia,Split,Split Delicacy,Local Food,,True,True,local_foods
+191,LF-192,Chile,Santiago,Santiago Delicacy,Local Food,,True,True,local_foods
+192,LF-193,Colombia,Cartagena,Cartagena Delicacy,Local Food,,True,True,local_foods
+193,LF-194,Colombia,Bogota,Bogota Delicacy,Local Food,,True,True,local_foods
+194,LF-195,Tanzania,Zanzibar,Zanzibar Delicacy,Local Food,,True,True,local_foods
+195,LF-196,Mauritius,Port Louis,Port Louis Delicacy,Local Food,,True,True,local_foods
+196,LF-197,Seychelles,Mahé,Mahé Delicacy,Local Food,,True,True,local_foods
+197,LF-198,Fiji,Nadi,Nadi Delicacy,Local Food,,True,True,local_foods
+198,LF-204,Japan,Tokyo,Nigiri Sushi,Seafood,,True,True,local_foods
+199,LF-205,Japan,Tokyo,Tonkotsu Ramen,Noodles,,True,True,local_foods
+200,LF-206,Japan,Tokyo,Tempura,Fried Dish,,True,True,local_foods
+201,LF-207,Japan,Tokyo,Wagyu Beef Skewers,Meat,,True,True,local_foods
+202,LF-208,Japan,Tokyo,Matcha Soft Serve,Dessert,,True,True,local_foods
+203,LF-209,Japan,Tokyo,Takoyaki,Street Food,,True,True,local_foods
+204,LF-210,India,Goa,Goan Fish Curry Rice,Main Course,,True,True,local_foods
+205,LF-211,India,Goa,Pork Vindaloo,Curry,,True,True,local_foods
+206,LF-212,India,Goa,Crab Xacuti,Seafood,,True,True,local_foods
+207,LF-213,India,Goa,Bebinca,Traditional Dessert,,True,True,local_foods
+208,LF-214,India,Goa,Chicken Cafreal,Grilled Meat,,True,True,local_foods
+209,LF-215,India,Goa,Poi Bread with Goan Sausage,Snack,,True,True,local_foods
+210,LF-216,France,Paris,Fresh Butter Croissant,Bakery,,True,True,local_foods
+211,LF-217,France,Paris,French Onion Soup (Soupe à l'oignon),Soup,,True,True,local_foods
+212,LF-218,France,Paris,Escargots de Bourgogne,Starter,,True,True,local_foods
+213,LF-219,France,Paris,Boeuf Bourguignon,Main Course,,True,True,local_foods
+214,LF-220,France,Paris,Macarons,Dessert,,True,True,local_foods
+215,LF-221,France,Paris,Duck Confit (Confit de Canard),Main Course,,True,True,local_foods
+216,LF-222,Italy,Rome,Pasta Carbonara,Main Course,,True,True,local_foods
+217,LF-223,Italy,Rome,Cacio e Pepe,Pasta,,True,True,local_foods
+218,LF-224,Italy,Rome,Pizza al Taglio,Street Food,,True,True,local_foods
+219,LF-225,Italy,Rome,Suppli (Fried Rice Ball),Snack,,True,True,local_foods
+220,LF-226,Italy,Rome,Artisanal Italian Gelato,Dessert,,True,True,local_foods
+221,LF-227,Italy,Rome,Carciofi alla Giudia (Fried Artichoke),Starter,,True,True,local_foods
+222,LF-228,India,Hyderabad,Haleem,Seasonal Specialty,,True,True,local_foods
+223,LF-229,India,Hyderabad,Irani Chai with Osmania Biscuits,Tea & Snack,,True,True,local_foods
+224,LF-230,India,Hyderabad,Double Ka Meetha,Dessert,,True,True,local_foods
+225,LF-231,India,Hyderabad,Mirchi Ka Salan,Side Dish,,True,True,local_foods
+226,LF-232,India,Hyderabad,Qubani Ka Meetha,Dessert,,True,True,local_foods
+227,LF-233,India,Amalapuram,Godavari Royyala Fry (Prawn Fry),Seafood,,True,True,local_foods
+228,LF-234,India,Amalapuram,Konaseema Pulasa Chepala Pulusu,Fish Curry,,True,True,local_foods
+229,LF-235,India,Amalapuram,Pesarattu Upma,Breakfast,,True,True,local_foods
+230,LF-236,India,Amalapuram,Kandi Podi with Fresh Ghee,Traditional Meal,,True,True,local_foods
+231,LF-237,India,Amalapuram,Pootharekulu (Paper Sweet),Dessert,,True,True,local_foods
+232,LF-238,India,Delhi,Butter Chicken,Main Course,,True,True,local_foods
+233,LF-239,India,Delhi,Chole Bhature,Street Food / Lunch,,True,True,local_foods
+234,LF-240,India,Delhi,Aloo Tikki,Street Food,,True,True,local_foods
+235,LF-241,India,Delhi,Gol Gappe,Street Food,,True,True,local_foods
+236,LF-242,India,Delhi,Dahi Bhalla,Snack / Street Food,,True,True,local_foods
+237,LF-243,India,Delhi,Jalebi & Rabri,Dessert,,True,True,local_foods
+238,LF-244,India,Delhi,Kulfi Falooda,Dessert,,True,True,local_foods
+239,LF-245,India,Delhi,Stuffed Paratha,Breakfast / Lunch,,True,True,local_foods
+240,LF-246,India,Delhi,Nihari,Main Course / Mughlai,,True,True,local_foods
+241,LF-247,India,Delhi,Seekh Kebab,Appetizer / Mughlai,,True,True,local_foods
+242,FS-1,India,Delhi,Mutton Burra,Local Cuisine,Karim's,True,True,food_spots
+243,FS-2,India,Agra,Chicken Tikka,Local Cuisine,Pinch of Spice,True,True,food_spots
+244,FS-3,India,Jaipur,Rajasthani Thali,Local Cuisine,LMB,True,True,food_spots
+245,FS-4,India,Goa,Fish Curry Rice,Local Cuisine,Fisherman's Wharf,True,True,food_spots
+246,FS-5,India,Bengaluru,Rava Dosa,Local Cuisine,MTR,True,True,food_spots
+247,FS-6,India,Hyderabad,Mutton Dum Biryani,Local Cuisine,Paradise Biryani,True,True,food_spots
+248,FS-7,India,Mumbai,Berry Pulav,Local Cuisine,Britannia & Co.,True,True,food_spots
+249,FS-8,Japan,Tokyo,Tonkotsu Ramen,Local Cuisine,Ichiran Ramen,True,True,food_spots
+250,FS-9,Japan,Kyoto,Kaiseki Dining,Local Cuisine,Gion Karyo,True,True,food_spots
+251,FS-10,France,Paris,Steak Frites,Local Cuisine,Le Relais de l'Entrecôte,True,True,food_spots
+252,FS-11,Italy,Rome,Cacio e Pepe,Local Cuisine,Da Enzo al 29,True,True,food_spots
+253,FS-12,Switzerland,Zurich,Cheese Fondue,Local Cuisine,Swiss Chuchi,True,True,food_spots
+254,FS-13,UAE,Dubai,Persian Kebabs,Local Cuisine,Al Ustad Special Kabab,True,True,food_spots
+255,FS-14,Thailand,Bangkok,Michelin Crab Omelette,Local Cuisine,Jay Fai,True,True,food_spots
+256,FS-15,Singapore,Singapore City,Satay Skewers,Local Cuisine,Lau Pa Sat,True,True,food_spots
+257,FS-16,United Kingdom,London,Fish & Chips,Local Cuisine,Poppies Fish & Chips,True,True,food_spots
+258,FS-17,USA,New York City,NY Style Cheese Slice,Local Cuisine,Joe's Pizza,True,True,food_spots
+259,FS-18,India,Chennai,Chennai Chef Specialty,Local & International,Chennai Central Bistro,True,True,food_spots
+260,FS-19,India,Kolkata,Kolkata Chef Specialty,Local & International,Kolkata Central Bistro,True,True,food_spots
+261,FS-20,India,Varanasi,Varanasi Chef Specialty,Local & International,Varanasi Central Bistro,True,True,food_spots
+262,FS-21,India,Udaipur,Udaipur Chef Specialty,Local & International,Udaipur Central Bistro,True,True,food_spots
+263,FS-22,India,Jodhpur,Jodhpur Chef Specialty,Local & International,Jodhpur Central Bistro,True,True,food_spots
+264,FS-23,India,Amritsar,Amritsar Chef Specialty,Local & International,Amritsar Central Bistro,True,True,food_spots
+265,FS-24,India,Rishikesh,Rishikesh Chef Specialty,Local & International,Rishikesh Central Bistro,True,True,food_spots
+266,FS-25,India,Manali,Manali Chef Specialty,Local & International,Manali Central Bistro,True,True,food_spots
+267,FS-26,India,Shimla,Shimla Chef Specialty,Local & International,Shimla Central Bistro,True,True,food_spots
+268,FS-27,India,Srinagar,Srinagar Chef Specialty,Local & International,Srinagar Central Bistro,True,True,food_spots
+269,FS-28,India,Kochi,Kochi Chef Specialty,Local & International,Kochi Central Bistro,True,True,food_spots
+270,FS-29,India,Munnar,Munnar Chef Specialty,Local & International,Munnar Central Bistro,True,True,food_spots
+271,FS-30,India,Ooty,Ooty Chef Specialty,Local & International,Ooty Central Bistro,True,True,food_spots
+272,FS-31,India,Mysuru,Mysuru Chef Specialty,Local & International,Mysuru Central Bistro,True,True,food_spots
+273,FS-32,India,Pune,Pune Chef Specialty,Local & International,Pune Central Bistro,True,True,food_spots
+274,FS-33,India,Ahmedabad,Ahmedabad Chef Specialty,Local & International,Ahmedabad Central Bistro,True,True,food_spots
+275,FS-34,India,Surat,Surat Chef Specialty,Local & International,Surat Central Bistro,True,True,food_spots
+276,FS-35,India,Bhubaneswar,Bhubaneswar Chef Specialty,Local & International,Bhubaneswar Central Bistro,True,True,food_spots
+277,FS-36,India,Visakhapatnam,Visakhapatnam Chef Specialty,Local & International,Visakhapatnam Central Bistro,True,True,food_spots
+278,FS-37,India,Amalapuram,Amalapuram Chef Specialty,Local & International,Sri Subbayya Gari Hotel,True,True,food_spots
+279,FS-38,India,Tirupati,Tirupati Chef Specialty,Local & International,Tirupati Bhimas Restaurant,True,True,food_spots
+280,FS-39,India,Vijayawada,Vijayawada Chef Specialty,Local & International,Vijayawada Central Bistro,True,True,food_spots
+281,FS-40,India,Araku Valley,Araku Valley Chef Specialty,Local & International,Araku Valley Central Bistro,True,True,food_spots
+282,FS-41,Japan,Osaka,Osaka Chef Specialty,Local & International,Osaka Central Bistro,True,True,food_spots
+283,FS-42,Japan,Hiroshima,Hiroshima Chef Specialty,Local & International,Hiroshima Central Bistro,True,True,food_spots
+284,FS-43,Japan,Nara,Nara Chef Specialty,Local & International,Nara Central Bistro,True,True,food_spots
+285,FS-44,Japan,Sapporo,Sapporo Chef Specialty,Local & International,Sapporo Central Bistro,True,True,food_spots
+286,FS-45,Japan,Fukuoka,Fukuoka Chef Specialty,Local & International,Fukuoka Central Bistro,True,True,food_spots
+287,FS-46,Japan,Okinawa,Okinawa Chef Specialty,Local & International,Okinawa Central Bistro,True,True,food_spots
+288,FS-47,France,Nice,Nice Chef Specialty,Local & International,Nice Central Bistro,True,True,food_spots
+289,FS-48,France,Lyon,Lyon Chef Specialty,Local & International,Lyon Central Bistro,True,True,food_spots
+290,FS-49,France,Marseille,Marseille Chef Specialty,Local & International,Marseille Central Bistro,True,True,food_spots
+291,FS-50,France,Bordeaux,Bordeaux Chef Specialty,Local & International,Bordeaux Central Bistro,True,True,food_spots
+292,FS-51,France,Strasbourg,Strasbourg Chef Specialty,Local & International,Strasbourg Central Bistro,True,True,food_spots
+293,FS-52,France,Cannes,Cannes Chef Specialty,Local & International,Cannes Central Bistro,True,True,food_spots
+294,FS-53,Italy,Venice,Venice Chef Specialty,Local & International,Venice Central Bistro,True,True,food_spots
+295,FS-54,Italy,Milan,Milan Chef Specialty,Local & International,Milan Central Bistro,True,True,food_spots
+296,FS-55,Italy,Florence,Florence Chef Specialty,Local & International,Florence Central Bistro,True,True,food_spots
+297,FS-56,Italy,Naples,Naples Chef Specialty,Local & International,Naples Central Bistro,True,True,food_spots
+298,FS-57,Italy,Amalfi,Amalfi Chef Specialty,Local & International,Amalfi Central Bistro,True,True,food_spots
+299,FS-58,Italy,Pisa,Pisa Chef Specialty,Local & International,Pisa Central Bistro,True,True,food_spots
+300,FS-59,Switzerland,Geneva,Geneva Chef Specialty,Local & International,Geneva Central Bistro,True,True,food_spots
+301,FS-60,Switzerland,Lucerne,Lucerne Chef Specialty,Local & International,Lucerne Central Bistro,True,True,food_spots
+302,FS-61,Switzerland,Interlaken,Interlaken Chef Specialty,Local & International,Interlaken Central Bistro,True,True,food_spots
+303,FS-62,Switzerland,Bern,Bern Chef Specialty,Local & International,Bern Central Bistro,True,True,food_spots
+304,FS-63,Switzerland,Zermatt,Zermatt Chef Specialty,Local & International,Zermatt Central Bistro,True,True,food_spots
+305,FS-64,United Kingdom,Edinburgh,Edinburgh Chef Specialty,Local & International,Edinburgh Central Bistro,True,True,food_spots
+306,FS-65,United Kingdom,Manchester,Manchester Chef Specialty,Local & International,Manchester Central Bistro,True,True,food_spots
+307,FS-66,United Kingdom,Liverpool,Liverpool Chef Specialty,Local & International,Liverpool Central Bistro,True,True,food_spots
+308,FS-67,United Kingdom,Bath,Bath Chef Specialty,Local & International,Bath Central Bistro,True,True,food_spots
+309,FS-68,United Kingdom,Oxford,Oxford Chef Specialty,Local & International,Oxford Central Bistro,True,True,food_spots
+310,FS-69,United Kingdom,Cambridge,Cambridge Chef Specialty,Local & International,Cambridge Central Bistro,True,True,food_spots
+311,FS-70,USA,Los Angeles,Los Angeles Chef Specialty,Local & International,Los Angeles Central Bistro,True,True,food_spots
+312,FS-71,USA,San Francisco,San Francisco Chef Specialty,Local & International,San Francisco Central Bistro,True,True,food_spots
+313,FS-72,USA,Las Vegas,Las Vegas Chef Specialty,Local & International,Las Vegas Central Bistro,True,True,food_spots
+314,FS-73,USA,Chicago,Chicago Chef Specialty,Local & International,Chicago Central Bistro,True,True,food_spots
+315,FS-74,USA,Miami,Miami Chef Specialty,Local & International,Miami Central Bistro,True,True,food_spots
+316,FS-75,USA,Orlando,Orlando Chef Specialty,Local & International,Orlando Central Bistro,True,True,food_spots
+317,FS-76,USA,Seattle,Seattle Chef Specialty,Local & International,Seattle Central Bistro,True,True,food_spots
+318,FS-77,USA,Boston,Boston Chef Specialty,Local & International,Boston Central Bistro,True,True,food_spots
+319,FS-78,USA,Washington DC,Washington DC Chef Specialty,Local & International,Washington DC Central Bistro,True,True,food_spots
+320,FS-79,USA,Honolulu,Honolulu Chef Specialty,Local & International,Honolulu Central Bistro,True,True,food_spots
+321,FS-80,UAE,Abu Dhabi,Abu Dhabi Chef Specialty,Local & International,Abu Dhabi Central Bistro,True,True,food_spots
+322,FS-81,UAE,Sharjah,Sharjah Chef Specialty,Local & International,Sharjah Central Bistro,True,True,food_spots
+323,FS-82,UAE,Ras Al Khaimah,Ras Al Khaimah Chef Specialty,Local & International,Ras Al Khaimah Central Bistro,True,True,food_spots
+324,FS-83,Thailand,Phuket,Phuket Chef Specialty,Local & International,Phuket Central Bistro,True,True,food_spots
+325,FS-84,Thailand,Chiang Mai,Chiang Mai Chef Specialty,Local & International,Chiang Mai Central Bistro,True,True,food_spots
+326,FS-85,Thailand,Pattaya,Pattaya Chef Specialty,Local & International,Pattaya Central Bistro,True,True,food_spots
+327,FS-86,Thailand,Krabi,Krabi Chef Specialty,Local & International,Krabi Central Bistro,True,True,food_spots
+328,FS-87,Thailand,Koh Samui,Koh Samui Chef Specialty,Local & International,Koh Samui Central Bistro,True,True,food_spots
+329,FS-88,Australia,Sydney,Sydney Chef Specialty,Local & International,Sydney Central Bistro,True,True,food_spots
+330,FS-89,Australia,Melbourne,Melbourne Chef Specialty,Local & International,Melbourne Central Bistro,True,True,food_spots
+331,FS-90,Australia,Brisbane,Brisbane Chef Specialty,Local & International,Brisbane Central Bistro,True,True,food_spots
+332,FS-91,Australia,Perth,Perth Chef Specialty,Local & International,Perth Central Bistro,True,True,food_spots
+333,FS-92,Australia,Adelaide,Adelaide Chef Specialty,Local & International,Adelaide Central Bistro,True,True,food_spots
+334,FS-93,Australia,Gold Coast,Gold Coast Chef Specialty,Local & International,Gold Coast Central Bistro,True,True,food_spots
+335,FS-94,Australia,Cairns,Cairns Chef Specialty,Local & International,Cairns Central Bistro,True,True,food_spots
+336,FS-95,Egypt,Cairo,Cairo Chef Specialty,Local & International,Cairo Central Bistro,True,True,food_spots
+337,FS-96,Egypt,Luxor,Luxor Chef Specialty,Local & International,Luxor Central Bistro,True,True,food_spots
+338,FS-97,Egypt,Alexandria,Alexandria Chef Specialty,Local & International,Alexandria Central Bistro,True,True,food_spots
+339,FS-98,Egypt,Sharm El Sheikh,Sharm El Sheikh Chef Specialty,Local & International,Sharm El Sheikh Central Bistro,True,True,food_spots
+340,FS-99,South Africa,Cape Town,Cape Town Chef Specialty,Local & International,Cape Town Central Bistro,True,True,food_spots
+341,FS-100,South Africa,Johannesburg,Johannesburg Chef Specialty,Local & International,Johannesburg Central Bistro,True,True,food_spots
+342,FS-101,South Africa,Durban,Durban Chef Specialty,Local & International,Durban Central Bistro,True,True,food_spots
+343,FS-102,South Africa,Pretoria,Pretoria Chef Specialty,Local & International,Pretoria Central Bistro,True,True,food_spots
+344,FS-103,South Africa,Kruger National Park,Kruger National Park Chef Specialty,Local & International,Kruger National Park Central Bistro,True,True,food_spots
+345,FS-104,Brazil,Rio de Janeiro,Rio de Janeiro Chef Specialty,Local & International,Rio de Janeiro Central Bistro,True,True,food_spots
+346,FS-105,Brazil,Sao Paulo,Sao Paulo Chef Specialty,Local & International,Sao Paulo Central Bistro,True,True,food_spots
+347,FS-106,Brazil,Salvador,Salvador Chef Specialty,Local & International,Salvador Central Bistro,True,True,food_spots
+348,FS-107,Brazil,Brasilia,Brasilia Chef Specialty,Local & International,Brasilia Central Bistro,True,True,food_spots
+349,FS-108,South Korea,Seoul,Seoul Chef Specialty,Local & International,Seoul Gourmet Bistro,True,True,food_spots
+350,FS-109,South Korea,Busan,Busan Chef Specialty,Local & International,Busan Gourmet Bistro,True,True,food_spots
+351,FS-110,South Korea,Jeju Island,Jeju Island Chef Specialty,Local & International,Jeju Island Gourmet Bistro,True,True,food_spots
+352,FS-111,China,Beijing,Beijing Chef Specialty,Local & International,Beijing Gourmet Bistro,True,True,food_spots
+353,FS-112,China,Shanghai,Shanghai Chef Specialty,Local & International,Shanghai Gourmet Bistro,True,True,food_spots
+354,FS-113,China,Xi'an,Xi'an Chef Specialty,Local & International,Xi'an Gourmet Bistro,True,True,food_spots
+355,FS-114,China,Chengdu,Chengdu Chef Specialty,Local & International,Chengdu Gourmet Bistro,True,True,food_spots
+356,FS-115,Vietnam,Hanoi,Hanoi Chef Specialty,Local & International,Hanoi Gourmet Bistro,True,True,food_spots
+357,FS-116,Vietnam,Ho Chi Minh City,Ho Chi Minh City Chef Specialty,Local & International,Ho Chi Minh City Gourmet Bistro,True,True,food_spots
+358,FS-117,Vietnam,Da Nang,Da Nang Chef Specialty,Local & International,Da Nang Gourmet Bistro,True,True,food_spots
+359,FS-118,Vietnam,Hoi An,Hoi An Chef Specialty,Local & International,Hoi An Gourmet Bistro,True,True,food_spots
+360,FS-119,Indonesia,Bali,Bali Chef Specialty,Local & International,Bali Gourmet Bistro,True,True,food_spots
+361,FS-120,Indonesia,Jakarta,Jakarta Chef Specialty,Local & International,Jakarta Gourmet Bistro,True,True,food_spots
+362,FS-121,Indonesia,Yogyakarta,Yogyakarta Chef Specialty,Local & International,Yogyakarta Gourmet Bistro,True,True,food_spots
+363,FS-122,Malaysia,Kuala Lumpur,Kuala Lumpur Chef Specialty,Local & International,Kuala Lumpur Gourmet Bistro,True,True,food_spots
+364,FS-123,Malaysia,Penang,Penang Chef Specialty,Local & International,Penang Gourmet Bistro,True,True,food_spots
+365,FS-124,Malaysia,Langkawi,Langkawi Chef Specialty,Local & International,Langkawi Gourmet Bistro,True,True,food_spots
+366,FS-125,Philippines,Manila,Manila Chef Specialty,Local & International,Manila Gourmet Bistro,True,True,food_spots
+367,FS-126,Philippines,Boracay,Boracay Chef Specialty,Local & International,Boracay Gourmet Bistro,True,True,food_spots
+368,FS-127,Philippines,El Nido,El Nido Chef Specialty,Local & International,El Nido Gourmet Bistro,True,True,food_spots
+369,FS-128,Sri Lanka,Colombo,Colombo Chef Specialty,Local & International,Colombo Gourmet Bistro,True,True,food_spots
+370,FS-129,Sri Lanka,Kandy,Kandy Chef Specialty,Local & International,Kandy Gourmet Bistro,True,True,food_spots
+371,FS-130,Sri Lanka,Galle,Galle Chef Specialty,Local & International,Galle Gourmet Bistro,True,True,food_spots
+372,FS-131,Maldives,Male,Male Chef Specialty,Local & International,Male Gourmet Bistro,True,True,food_spots
+373,FS-132,Maldives,Maafushi,Maafushi Chef Specialty,Local & International,Maafushi Gourmet Bistro,True,True,food_spots
+374,FS-133,Saudi Arabia,Riyadh,Riyadh Chef Specialty,Local & International,Riyadh Gourmet Bistro,True,True,food_spots
+375,FS-134,Saudi Arabia,Jeddah,Jeddah Chef Specialty,Local & International,Jeddah Gourmet Bistro,True,True,food_spots
+376,FS-135,Saudi Arabia,Al-Ula,Al-Ula Chef Specialty,Local & International,Al-Ula Gourmet Bistro,True,True,food_spots
+377,FS-136,Turkey,Istanbul,Istanbul Chef Specialty,Local & International,Istanbul Gourmet Bistro,True,True,food_spots
+378,FS-137,Turkey,Cappadocia,Cappadocia Chef Specialty,Local & International,Cappadocia Gourmet Bistro,True,True,food_spots
+379,FS-138,Turkey,Antalya,Antalya Chef Specialty,Local & International,Antalya Gourmet Bistro,True,True,food_spots
+380,FS-139,Spain,Barcelona,Barcelona Chef Specialty,Local & International,Barcelona Gourmet Bistro,True,True,food_spots
+381,FS-140,Spain,Madrid,Madrid Chef Specialty,Local & International,Madrid Gourmet Bistro,True,True,food_spots
+382,FS-141,Spain,Seville,Seville Chef Specialty,Local & International,Seville Gourmet Bistro,True,True,food_spots
+383,FS-142,Germany,Berlin,Berlin Chef Specialty,Local & International,Berlin Gourmet Bistro,True,True,food_spots
+384,FS-143,Germany,Munich,Munich Chef Specialty,Local & International,Munich Gourmet Bistro,True,True,food_spots
+385,FS-144,Germany,Frankfurt,Frankfurt Chef Specialty,Local & International,Frankfurt Gourmet Bistro,True,True,food_spots
+386,FS-145,Netherlands,Amsterdam,Amsterdam Chef Specialty,Local & International,Amsterdam Gourmet Bistro,True,True,food_spots
+387,FS-146,Netherlands,Rotterdam,Rotterdam Chef Specialty,Local & International,Rotterdam Gourmet Bistro,True,True,food_spots
+388,FS-147,Greece,Athens,Athens Chef Specialty,Local & International,Athens Gourmet Bistro,True,True,food_spots
+389,FS-148,Greece,Santorini,Santorini Chef Specialty,Local & International,Santorini Gourmet Bistro,True,True,food_spots
+390,FS-149,Greece,Mykonos,Mykonos Chef Specialty,Local & International,Mykonos Gourmet Bistro,True,True,food_spots
+391,FS-150,Portugal,Lisbon,Lisbon Chef Specialty,Local & International,Lisbon Gourmet Bistro,True,True,food_spots
+392,FS-151,Portugal,Porto,Porto Chef Specialty,Local & International,Porto Gourmet Bistro,True,True,food_spots
+393,FS-152,Canada,Toronto,Toronto Chef Specialty,Local & International,Toronto Gourmet Bistro,True,True,food_spots
+394,FS-153,Canada,Vancouver,Vancouver Chef Specialty,Local & International,Vancouver Gourmet Bistro,True,True,food_spots
+395,FS-154,Canada,Montreal,Montreal Chef Specialty,Local & International,Montreal Gourmet Bistro,True,True,food_spots
+396,FS-155,Mexico,Mexico City,Mexico City Chef Specialty,Local & International,Mexico City Gourmet Bistro,True,True,food_spots
+397,FS-156,Mexico,Cancun,Cancun Chef Specialty,Local & International,Cancun Gourmet Bistro,True,True,food_spots
+398,FS-157,Argentina,Buenos Aires,Buenos Aires Chef Specialty,Local & International,Buenos Aires Gourmet Bistro,True,True,food_spots
+399,FS-158,Argentina,Bariloche,Bariloche Chef Specialty,Local & International,Bariloche Gourmet Bistro,True,True,food_spots
+400,FS-159,Peru,Cusco,Cusco Chef Specialty,Local & International,Cusco Gourmet Bistro,True,True,food_spots
+401,FS-160,Peru,Lima,Lima Chef Specialty,Local & International,Lima Gourmet Bistro,True,True,food_spots
+402,FS-161,Morocco,Marrakech,Marrakech Chef Specialty,Local & International,Marrakech Gourmet Bistro,True,True,food_spots
+403,FS-162,Morocco,Casablanca,Casablanca Chef Specialty,Local & International,Casablanca Gourmet Bistro,True,True,food_spots
+404,FS-163,Kenya,Nairobi,Nairobi Chef Specialty,Local & International,Nairobi Gourmet Bistro,True,True,food_spots
+405,FS-164,Kenya,Mombasa,Mombasa Chef Specialty,Local & International,Mombasa Gourmet Bistro,True,True,food_spots
+406,FS-165,New Zealand,Auckland,Auckland Chef Specialty,Local & International,Auckland Gourmet Bistro,True,True,food_spots
+407,FS-166,New Zealand,Queenstown,Queenstown Chef Specialty,Local & International,Queenstown Gourmet Bistro,True,True,food_spots
+408,FS-167,Nepal,Kathmandu,Kathmandu Special,Local & International,Kathmandu Cafe,True,True,food_spots
+409,FS-168,Nepal,Pokhara,Pokhara Special,Local & International,Pokhara Cafe,True,True,food_spots
+410,FS-169,Bhutan,Thimphu,Thimphu Special,Local & International,Thimphu Cafe,True,True,food_spots
+411,FS-170,Bhutan,Paro,Paro Special,Local & International,Paro Cafe,True,True,food_spots
+412,FS-171,Qatar,Doha,Doha Special,Local & International,Doha Cafe,True,True,food_spots
+413,FS-172,Oman,Muscat,Muscat Special,Local & International,Muscat Cafe,True,True,food_spots
+414,FS-173,Oman,Salalah,Salalah Special,Local & International,Salalah Cafe,True,True,food_spots
+415,FS-174,Austria,Vienna,Vienna Special,Local & International,Vienna Cafe,True,True,food_spots
+416,FS-175,Austria,Salzburg,Salzburg Special,Local & International,Salzburg Cafe,True,True,food_spots
+417,FS-176,Belgium,Brussels,Brussels Special,Local & International,Brussels Cafe,True,True,food_spots
+418,FS-177,Belgium,Bruges,Bruges Special,Local & International,Bruges Cafe,True,True,food_spots
+419,FS-178,Norway,Oslo,Oslo Special,Local & International,Oslo Cafe,True,True,food_spots
+420,FS-179,Norway,Bergen,Bergen Special,Local & International,Bergen Cafe,True,True,food_spots
+421,FS-180,Sweden,Stockholm,Stockholm Special,Local & International,Stockholm Cafe,True,True,food_spots
+422,FS-181,Denmark,Copenhagen,Copenhagen Special,Local & International,Copenhagen Cafe,True,True,food_spots
+423,FS-182,Finland,Helsinki,Helsinki Special,Local & International,Helsinki Cafe,True,True,food_spots
+424,FS-183,Finland,Rovaniemi,Rovaniemi Special,Local & International,Rovaniemi Cafe,True,True,food_spots
+425,FS-184,Iceland,Reykjavik,Reykjavik Special,Local & International,Reykjavik Cafe,True,True,food_spots
+426,FS-185,Ireland,Dublin,Dublin Special,Local & International,Dublin Cafe,True,True,food_spots
+427,FS-186,Czech Republic,Prague,Prague Special,Local & International,Prague Cafe,True,True,food_spots
+428,FS-187,Hungary,Budapest,Budapest Special,Local & International,Budapest Cafe,True,True,food_spots
+429,FS-188,Poland,Krakow,Krakow Special,Local & International,Krakow Cafe,True,True,food_spots
+430,FS-189,Poland,Warsaw,Warsaw Special,Local & International,Warsaw Cafe,True,True,food_spots
+431,FS-190,Croatia,Dubrovnik,Dubrovnik Special,Local & International,Dubrovnik Cafe,True,True,food_spots
+432,FS-191,Croatia,Split,Split Special,Local & International,Split Cafe,True,True,food_spots
+433,FS-192,Chile,Santiago,Santiago Special,Local & International,Santiago Cafe,True,True,food_spots
+434,FS-193,Colombia,Cartagena,Cartagena Special,Local & International,Cartagena Cafe,True,True,food_spots
+435,FS-194,Colombia,Bogota,Bogota Special,Local & International,Bogota Cafe,True,True,food_spots
+436,FS-195,Tanzania,Zanzibar,Zanzibar Special,Local & International,Zanzibar Cafe,True,True,food_spots
+437,FS-196,Mauritius,Port Louis,Port Louis Special,Local & International,Port Louis Cafe,True,True,food_spots
+438,FS-197,Seychelles,Mahé,Mahé Special,Local & International,Mahé Cafe,True,True,food_spots
+439,FS-198,Fiji,Nadi,Nadi Special,Local & International,Nadi Cafe,True,True,food_spots
+440,FS-199,India,Delhi,Mutton Barra & Shahi Paneer,Mughlai,Karim's Old Delhi,True,True,food_spots
+441,FS-200,India,Delhi,Stuffed Fried Paranthas,Street Food,Paranthe Wali Gali,True,True,food_spots
+442,FS-201,India,Delhi,Dal Bukhara & Tandoori Raan,Fine Dining,Bukhara - ITC Maurya,True,True,food_spots
+443,FS-202,India,Delhi,Raj Kachori & Chole Bhature,North Indian,Haldiram's Chandni Chowk,True,True,food_spots
+444,FS-203,India,Delhi,Filter Coffee & Dosa,Cafe,Indian Coffee House,True,True,food_spots
+445,FS-204,India,Delhi,Ghee Roast Dosa & Filter Coffee,South Indian,Saravana Bhavan Connaught Place,True,True,food_spots
+446,FS-205,Japan,Tokyo,Omakase Chef's Choice Sushi,Sushi Fine Dining,Sukiyabashi Jiro,True,True,food_spots
+447,FS-206,Japan,Tokyo,Tonkotsu Pork Bone Ramen,Ramen,Ichiran Ramen Shinjuku,True,True,food_spots
+448,FS-207,Japan,Tokyo,Deep-Fried Gyukatsu Cutlet,Japanese Beef,Gyukatsu Motomura,True,True,food_spots
+449,FS-208,Japan,Tokyo,Dipping Tsukemen Noodles,Noodle Shop,Fuunji Tsukemen,True,True,food_spots
+450,FS-209,Japan,Tokyo,Grilled Chicken Skewers,Izakaya,Torikizoku Yakitori,True,True,food_spots
+451,FS-210,Japan,Tokyo,Strawberry Chocolate Whipped Crepe,Dessert,Harajuku Marion Crepes,True,True,food_spots
+452,FS-211,India,Goa,Grilled Lobster & Bebinca,Beach Shack,Britto's Baga Beach,True,True,food_spots
+453,FS-212,India,Goa,Fish Thali & Crab Xacuti,Local Goan,Vinayak Family Restaurant,True,True,food_spots
+454,FS-213,India,Goa,Souvlaki & Sunset Cocktails,Greek Fine Dining,Thalassa Vagator,True,True,food_spots
+455,FS-214,India,Goa,Goan Sausage Roll & Croissant,Bakery & Cafe,Infantaria Cafe Candolim,True,True,food_spots
+456,FS-215,India,Goa,Pork Vindaloo & Sol Kadi,Heritage Goan,Mum's Kitchen Panaji,True,True,food_spots
+457,FS-216,France,Paris,Classic Roast Veal & Crêpes Suzette,Fine Dining,Le Train Bleu,True,True,food_spots
+458,FS-217,France,Paris,Escargots & Boeuf Bourguignon,Bistro,Bouillon Chartier,True,True,food_spots
+459,FS-218,France,Paris,Pistachio Escargot Pastry & Croissants,Bakery,Du Pain et des Idées,True,True,food_spots
+460,FS-219,France,Paris,Middle Eastern Pita Sandwich,Street Food,L'As du Fallafel,True,True,food_spots
+461,FS-220,France,Paris,Hot Chocolate & Croque Monsieur,Historic Cafe,Café de Flore,True,True,food_spots
+462,FS-221,France,Paris,Signature Rose & Raspberry Macarons,Pâtisserie,Pierre Hermé Paris,True,True,food_spots
+463,FS-222,Italy,Rome,Cacio e Pepe & Carbonara,Traditional Roman,Trattoria da Enzo al 29,True,True,food_spots
+464,FS-223,Italy,Rome,Artisanal Roman Slice Pizza,Pizza al Taglio,Pizzarium Bonci,True,True,food_spots
+465,FS-224,Italy,Rome,Pistachio & Stracciatella Gelato,Gelato,Giolitti Gelateria,True,True,food_spots
+466,FS-225,Italy,Rome,Rigatoni con La Pagliata,Deli & Restaurant,Roscioli Salumeria con Cucina,True,True,food_spots
+467,FS-226,Italy,Rome,Fried Rice Balls with Mozzarella,Street Food,Suppli Roma,True,True,food_spots
+468,FS-227,Italy,Rome,Schiacciata Florentine Sandwich,Sandwich Shop,All'Antico Vinaio Roma,True,True,food_spots
+469,FS-228,India,Hyderabad,World-famous Hyderabadi Dum Biryani,Hyderabadi,Paradise Biryani Secunderabad,True,True,food_spots
+470,FS-229,India,Hyderabad,Mutton Biryani & Chicken 65,Hyderabadi,Bawarchi Restaurant RTC X Roads,True,True,food_spots
+471,FS-230,India,Hyderabad,Hand-churned Mango & Fig Ice Cream,Dessert,Famous Ice Cream Nampally,True,True,food_spots
+472,FS-231,India,Hyderabad,7 Guntur Chutneys & Steam Dosa,South Indian,Chutneys Banjara Hills,True,True,food_spots
+473,FS-232,India,Hyderabad,Minaret Fine Dining Mughlai Feast,Fine Dining,Jewel of Nizam - The Golkonda Hotel,True,True,food_spots
+474,FS-233,India,Hyderabad,Irani Chai & Osmania Biscuits,Bakery,Nimrah Cafe & Bakery Charminar,True,True,food_spots
+475,FS-234,India,Amalapuram,Godavari Royyala Biryani & Pulasa Fish Curry,Andhra Cuisine,Konaseema Ruchulu,True,True,food_spots
+476,FS-235,India,Amalapuram,Unlimited Leaf Meal with Kandi Podi & Ghee,Traditional Andhra Thali,Subbayya Gari Hotel,True,True,food_spots
+477,FS-236,India,Amalapuram,Pesarattu Upma & Dibba Rotti,Breakfast,Amalapuram Tiffin Center,True,True,food_spots
+
+=== SECTION 4: PLACES / ATTRACTIONS IN DATABASE ===
+#,ID,Country,City,Attraction Name,Category,Has Description,Has Image
+1,1,India,Delhi,Red Fort,Monument,True,True
+2,2,India,Delhi,Qutub Minar,Heritage Site,True,True
+3,3,India,Agra,Taj Mahal,Wonder of the World,True,True
+4,4,India,Jaipur,Amber Fort,Hill Fort,True,True
+5,5,India,Goa,Baga Beach,Beach,True,True
+6,6,India,Bengaluru,Lalbagh Botanical Garden,Park,True,True
+7,7,India,Hyderabad,Charminar,Monument,True,True
+8,8,India,Mumbai,Gateway of India,Landmark,True,True
+9,9,Japan,Tokyo,Senso-ji Temple,Temple,True,True
+10,10,Japan,Tokyo,Shibuya Crossing,Landmark,True,True
+11,11,Japan,Kyoto,Fushimi Inari Shrine,Shrine,True,True
+12,12,France,Paris,Eiffel Tower,Landmark,True,True
+13,13,France,Paris,Louvre Museum,Museum,True,True
+14,14,Italy,Rome,Colosseum,Ancient Monument,True,True
+15,15,Switzerland,Zurich,Lake Zurich Promenade,Lake,True,True
+16,16,UAE,Dubai,Burj Khalifa,Skyscraper,True,True
+17,17,Thailand,Bangkok,Grand Palace,Palace,True,True
+18,18,Singapore,Singapore City,Gardens by the Bay,Park,True,True
+19,19,United Kingdom,London,Big Ben,Landmark,True,True
+20,20,USA,New York City,Statue of Liberty,Monument,True,True
+21,21,India,Chennai,Chennai Historic Landmark,Attraction,True,True
+22,22,India,Kolkata,Kolkata Historic Landmark,Attraction,True,True
+23,23,India,Varanasi,Varanasi Historic Landmark,Attraction,True,True
+24,24,India,Udaipur,Udaipur Historic Landmark,Attraction,True,True
+25,25,India,Jodhpur,Jodhpur Historic Landmark,Attraction,True,True
+26,26,India,Amritsar,Amritsar Historic Landmark,Attraction,True,True
+27,27,India,Rishikesh,Rishikesh Historic Landmark,Attraction,True,True
+28,28,India,Manali,Manali Historic Landmark,Attraction,True,True
+29,29,India,Shimla,Shimla Historic Landmark,Attraction,True,True
+30,30,India,Srinagar,Srinagar Historic Landmark,Attraction,True,True
+31,31,India,Kochi,Kochi Historic Landmark,Attraction,True,True
+32,32,India,Munnar,Munnar Historic Landmark,Attraction,True,True
+33,33,India,Ooty,Ooty Historic Landmark,Attraction,True,True
+34,34,India,Mysuru,Mysuru Historic Landmark,Attraction,True,True
+35,35,India,Pune,Pune Historic Landmark,Attraction,True,True
+36,36,India,Ahmedabad,Ahmedabad Historic Landmark,Attraction,True,True
+37,37,India,Surat,Surat Historic Landmark,Attraction,True,True
+38,38,India,Bhubaneswar,Bhubaneswar Historic Landmark,Attraction,True,True
+39,39,India,Visakhapatnam,Visakhapatnam Historic Landmark,Attraction,True,True
+40,40,India,Amalapuram,Amalapuram Historic Landmark,Attraction,True,True
+41,41,India,Tirupati,Tirumala Temple & Srivari Sannidhi,Attraction,True,True
+42,42,India,Vijayawada,Vijayawada Historic Landmark,Attraction,True,True
+43,43,India,Araku Valley,Araku Valley Historic Landmark,Attraction,True,True
+44,44,Japan,Osaka,Osaka Historic Landmark,Attraction,True,True
+45,45,Japan,Hiroshima,Hiroshima Historic Landmark,Attraction,True,True
+46,46,Japan,Nara,Nara Historic Landmark,Attraction,True,True
+47,47,Japan,Sapporo,Sapporo Historic Landmark,Attraction,True,True
+48,48,Japan,Fukuoka,Fukuoka Historic Landmark,Attraction,True,True
+49,49,Japan,Okinawa,Okinawa Historic Landmark,Attraction,True,True
+50,50,France,Nice,Nice Historic Landmark,Attraction,True,True
+51,51,France,Lyon,Lyon Historic Landmark,Attraction,True,True
+52,52,France,Marseille,Marseille Historic Landmark,Attraction,True,True
+53,53,France,Bordeaux,Bordeaux Historic Landmark,Attraction,True,True
+54,54,France,Strasbourg,Strasbourg Historic Landmark,Attraction,True,True
+55,55,France,Cannes,Cannes Historic Landmark,Attraction,True,True
+56,56,Italy,Venice,Venice Historic Landmark,Attraction,True,True
+57,57,Italy,Milan,Milan Historic Landmark,Attraction,True,True
+58,58,Italy,Florence,Florence Historic Landmark,Attraction,True,True
+59,59,Italy,Naples,Naples Historic Landmark,Attraction,True,True
+60,60,Italy,Amalfi,Amalfi Historic Landmark,Attraction,True,True
+61,61,Italy,Pisa,Pisa Historic Landmark,Attraction,True,True
+62,62,Switzerland,Geneva,Geneva Historic Landmark,Attraction,True,True
+63,63,Switzerland,Lucerne,Lucerne Historic Landmark,Attraction,True,True
+64,64,Switzerland,Interlaken,Interlaken Historic Landmark,Attraction,True,True
+65,65,Switzerland,Bern,Bern Historic Landmark,Attraction,True,True
+66,66,Switzerland,Zermatt,Zermatt Historic Landmark,Attraction,True,True
+67,67,United Kingdom,Edinburgh,Edinburgh Historic Landmark,Attraction,True,True
+68,68,United Kingdom,Manchester,Manchester Historic Landmark,Attraction,True,True
+69,69,United Kingdom,Liverpool,Liverpool Historic Landmark,Attraction,True,True
+70,70,United Kingdom,Bath,Bath Historic Landmark,Attraction,True,True
+71,71,United Kingdom,Oxford,Oxford Historic Landmark,Attraction,True,True
+72,72,United Kingdom,Cambridge,Cambridge Historic Landmark,Attraction,True,True
+73,73,USA,Los Angeles,Los Angeles Historic Landmark,Attraction,True,True
+74,74,USA,San Francisco,San Francisco Historic Landmark,Attraction,True,True
+75,75,USA,Las Vegas,Las Vegas Historic Landmark,Attraction,True,True
+76,76,USA,Chicago,Chicago Historic Landmark,Attraction,True,True
+77,77,USA,Miami,Miami Historic Landmark,Attraction,True,True
+78,78,USA,Orlando,Orlando Historic Landmark,Attraction,True,True
+79,79,USA,Seattle,Seattle Historic Landmark,Attraction,True,True
+80,80,USA,Boston,Boston Historic Landmark,Attraction,True,True
+81,81,USA,Washington DC,Washington DC Historic Landmark,Attraction,True,True
+82,82,USA,Honolulu,Honolulu Historic Landmark,Attraction,True,True
+83,83,UAE,Abu Dhabi,Abu Dhabi Historic Landmark,Attraction,True,True
+84,84,UAE,Sharjah,Sharjah Historic Landmark,Attraction,True,True
+85,85,UAE,Ras Al Khaimah,Ras Al Khaimah Historic Landmark,Attraction,True,True
+86,86,Thailand,Phuket,Phuket Historic Landmark,Attraction,True,True
+87,87,Thailand,Chiang Mai,Chiang Mai Historic Landmark,Attraction,True,True
+88,88,Thailand,Pattaya,Pattaya Historic Landmark,Attraction,True,True
+89,89,Thailand,Krabi,Krabi Historic Landmark,Attraction,True,True
+90,90,Thailand,Koh Samui,Koh Samui Historic Landmark,Attraction,True,True
+91,91,Australia,Sydney,Sydney Historic Landmark,Attraction,True,True
+92,92,Australia,Melbourne,Melbourne Historic Landmark,Attraction,True,True
+93,93,Australia,Brisbane,Brisbane Historic Landmark,Attraction,True,True
+94,94,Australia,Perth,Perth Historic Landmark,Attraction,True,True
+95,95,Australia,Adelaide,Adelaide Historic Landmark,Attraction,True,True
+96,96,Australia,Gold Coast,Gold Coast Historic Landmark,Attraction,True,True
+97,97,Australia,Cairns,Cairns Historic Landmark,Attraction,True,True
+98,98,Egypt,Cairo,Cairo Historic Landmark,Attraction,True,True
+99,99,Egypt,Luxor,Luxor Historic Landmark,Attraction,True,True
+100,100,Egypt,Alexandria,Alexandria Historic Landmark,Attraction,True,True
+101,101,Egypt,Sharm El Sheikh,Sharm El Sheikh Historic Landmark,Attraction,True,True
+102,102,South Africa,Cape Town,Cape Town Historic Landmark,Attraction,True,True
+103,103,South Africa,Johannesburg,Johannesburg Historic Landmark,Attraction,True,True
+104,104,South Africa,Durban,Durban Historic Landmark,Attraction,True,True
+105,105,South Africa,Pretoria,Pretoria Historic Landmark,Attraction,True,True
+106,106,South Africa,Kruger National Park,Kruger National Park Historic Landmark,Attraction,True,True
+107,107,Brazil,Rio de Janeiro,Rio de Janeiro Historic Landmark,Attraction,True,True
+108,108,Brazil,Sao Paulo,Sao Paulo Historic Landmark,Attraction,True,True
+109,109,Brazil,Salvador,Salvador Historic Landmark,Attraction,True,True
+110,110,Brazil,Brasilia,Brasilia Historic Landmark,Attraction,True,True
+111,111,South Korea,Seoul,Seoul Central Plaza,Attraction,True,True
+112,112,South Korea,Busan,Busan Central Plaza,Attraction,True,True
+113,113,South Korea,Jeju Island,Jeju Island Central Plaza,Attraction,True,True
+114,114,China,Beijing,Beijing Central Plaza,Attraction,True,True
+115,115,China,Shanghai,Shanghai Central Plaza,Attraction,True,True
+116,116,China,Xi'an,Xi'an Central Plaza,Attraction,True,True
+117,117,China,Chengdu,Chengdu Central Plaza,Attraction,True,True
+118,118,Vietnam,Hanoi,Hanoi Central Plaza,Attraction,True,True
+119,119,Vietnam,Ho Chi Minh City,Ho Chi Minh City Central Plaza,Attraction,True,True
+120,120,Vietnam,Da Nang,Da Nang Central Plaza,Attraction,True,True
+121,121,Vietnam,Hoi An,Hoi An Central Plaza,Attraction,True,True
+122,122,Indonesia,Bali,Bali Central Plaza,Attraction,True,True
+123,123,Indonesia,Jakarta,Jakarta Central Plaza,Attraction,True,True
+124,124,Indonesia,Yogyakarta,Yogyakarta Central Plaza,Attraction,True,True
+125,125,Malaysia,Kuala Lumpur,Kuala Lumpur Central Plaza,Attraction,True,True
+126,126,Malaysia,Penang,Penang Central Plaza,Attraction,True,True
+127,127,Malaysia,Langkawi,Langkawi Central Plaza,Attraction,True,True
+128,128,Philippines,Manila,Manila Central Plaza,Attraction,True,True
+129,129,Philippines,Boracay,Boracay Central Plaza,Attraction,True,True
+130,130,Philippines,El Nido,El Nido Central Plaza,Attraction,True,True
+131,131,Sri Lanka,Colombo,Colombo Central Plaza,Attraction,True,True
+132,132,Sri Lanka,Kandy,Kandy Central Plaza,Attraction,True,True
+133,133,Sri Lanka,Galle,Galle Central Plaza,Attraction,True,True
+134,134,Maldives,Male,Male Central Plaza,Attraction,True,True
+135,135,Maldives,Maafushi,Maafushi Central Plaza,Attraction,True,True
+136,136,Saudi Arabia,Riyadh,Riyadh Central Plaza,Attraction,True,True
+137,137,Saudi Arabia,Jeddah,Jeddah Central Plaza,Attraction,True,True
+138,138,Saudi Arabia,Al-Ula,Al-Ula Central Plaza,Attraction,True,True
+139,139,Turkey,Istanbul,Istanbul Central Plaza,Attraction,True,True
+140,140,Turkey,Cappadocia,Cappadocia Central Plaza,Attraction,True,True
+141,141,Turkey,Antalya,Antalya Central Plaza,Attraction,True,True
+142,142,Spain,Barcelona,Barcelona Central Plaza,Attraction,True,True
+143,143,Spain,Madrid,Madrid Central Plaza,Attraction,True,True
+144,144,Spain,Seville,Seville Central Plaza,Attraction,True,True
+145,145,Germany,Berlin,Berlin Central Plaza,Attraction,True,True
+146,146,Germany,Munich,Munich Central Plaza,Attraction,True,True
+147,147,Germany,Frankfurt,Frankfurt Central Plaza,Attraction,True,True
+148,148,Netherlands,Amsterdam,Amsterdam Central Plaza,Attraction,True,True
+149,149,Netherlands,Rotterdam,Rotterdam Central Plaza,Attraction,True,True
+150,150,Greece,Athens,Athens Central Plaza,Attraction,True,True
+151,151,Greece,Santorini,Santorini Central Plaza,Attraction,True,True
+152,152,Greece,Mykonos,Mykonos Central Plaza,Attraction,True,True
+153,153,Portugal,Lisbon,Lisbon Central Plaza,Attraction,True,True
+154,154,Portugal,Porto,Porto Central Plaza,Attraction,True,True
+155,155,Canada,Toronto,Toronto Central Plaza,Attraction,True,True
+156,156,Canada,Vancouver,Vancouver Central Plaza,Attraction,True,True
+157,157,Canada,Montreal,Montreal Central Plaza,Attraction,True,True
+158,158,Mexico,Mexico City,Mexico City Central Plaza,Attraction,True,True
+159,159,Mexico,Cancun,Cancun Central Plaza,Attraction,True,True
+160,160,Argentina,Buenos Aires,Buenos Aires Central Plaza,Attraction,True,True
+161,161,Argentina,Bariloche,Bariloche Central Plaza,Attraction,True,True
+162,162,Peru,Cusco,Cusco Central Plaza,Attraction,True,True
+163,163,Peru,Lima,Lima Central Plaza,Attraction,True,True
+164,164,Morocco,Marrakech,Marrakech Central Plaza,Attraction,True,True
+165,165,Morocco,Casablanca,Casablanca Central Plaza,Attraction,True,True
+166,166,Kenya,Nairobi,Nairobi Central Plaza,Attraction,True,True
+167,167,Kenya,Mombasa,Mombasa Central Plaza,Attraction,True,True
+168,168,New Zealand,Auckland,Auckland Central Plaza,Attraction,True,True
+169,169,New Zealand,Queenstown,Queenstown Central Plaza,Attraction,True,True
+170,170,Nepal,Kathmandu,Kathmandu Central Landmark,Attraction,True,True
+171,171,Nepal,Pokhara,Pokhara Central Landmark,Attraction,True,True
+172,172,Bhutan,Thimphu,Thimphu Central Landmark,Attraction,True,True
+173,173,Bhutan,Paro,Paro Central Landmark,Attraction,True,True
+174,174,Qatar,Doha,Doha Central Landmark,Attraction,True,True
+175,175,Oman,Muscat,Muscat Central Landmark,Attraction,True,True
+176,176,Oman,Salalah,Salalah Central Landmark,Attraction,True,True
+177,177,Austria,Vienna,Vienna Central Landmark,Attraction,True,True
+178,178,Austria,Salzburg,Salzburg Central Landmark,Attraction,True,True
+179,179,Belgium,Brussels,Brussels Central Landmark,Attraction,True,True
+180,180,Belgium,Bruges,Bruges Central Landmark,Attraction,True,True
+181,181,Norway,Oslo,Oslo Central Landmark,Attraction,True,True
+182,182,Norway,Bergen,Bergen Central Landmark,Attraction,True,True
+183,183,Sweden,Stockholm,Stockholm Central Landmark,Attraction,True,True
+184,184,Denmark,Copenhagen,Copenhagen Central Landmark,Attraction,True,True
+185,185,Finland,Helsinki,Helsinki Central Landmark,Attraction,True,True
+186,186,Finland,Rovaniemi,Rovaniemi Central Landmark,Attraction,True,True
+187,187,Iceland,Reykjavik,Reykjavik Central Landmark,Attraction,True,True
+188,188,Ireland,Dublin,Dublin Central Landmark,Attraction,True,True
+189,189,Czech Republic,Prague,Prague Central Landmark,Attraction,True,True
+190,190,Hungary,Budapest,Budapest Central Landmark,Attraction,True,True
+191,191,Poland,Krakow,Krakow Central Landmark,Attraction,True,True
+192,192,Poland,Warsaw,Warsaw Central Landmark,Attraction,True,True
+193,193,Croatia,Dubrovnik,Dubrovnik Central Landmark,Attraction,True,True
+194,194,Croatia,Split,Split Central Landmark,Attraction,True,True
+195,195,Chile,Santiago,Santiago Central Landmark,Attraction,True,True
+196,196,Colombia,Cartagena,Cartagena Central Landmark,Attraction,True,True
+197,197,Colombia,Bogota,Bogota Central Landmark,Attraction,True,True
+198,198,Tanzania,Zanzibar,Zanzibar Central Landmark,Attraction,True,True
+199,199,Mauritius,Port Louis,Port Louis Central Landmark,Attraction,True,True
+200,200,Seychelles,Mahé,Mahé Central Landmark,Attraction,True,True
+201,201,Fiji,Nadi,Nadi Central Landmark,Attraction,True,True
+202,202,India,Delhi,Red Fort (Lal Qila),Monument,True,True
+203,203,India,Delhi,Humayun's Tomb,Heritage Site,True,True
+204,204,India,Delhi,India Gate & Kartavya Path,Landmark,True,True
+205,205,India,Delhi,Lotus Temple,Architecture,True,True
+206,206,India,Delhi,Akshardham Temple,Temple,True,True
+207,207,India,Delhi,Jama Masjid,Mosque,True,False
+208,208,India,Delhi,Chandni Chowk,Market,True,True
+209,209,India,Delhi,Rashtrapati Bhavan & Amrit Udyan,Government,True,False
+210,210,India,Delhi,National Museum,Museum,True,True
+211,211,Japan,Tokyo,Shibuya Crossing & Hachiko,Landmark,True,True
+212,212,Japan,Tokyo,Tokyo Skytree,Observation Deck,True,True
+213,213,Japan,Tokyo,Meiji Jingu Shrine,Shrine,True,True
+214,214,Japan,Tokyo,TeamLab Planets,Digital Art,True,True
+215,215,Japan,Tokyo,Shinjuku Gyoen National Garden,Park,True,True
+216,216,Japan,Tokyo,Akihabara Electric Town,Shopping,True,True
+217,217,Japan,Tokyo,Tsukiji Outer Market,Food Market,True,True
+218,218,Japan,Tokyo,Imperial Palace Gardens,Castle,True,True
+219,219,Japan,Tokyo,Roppongi Hills Observation Deck,Viewpoint,True,True
+220,220,India,Goa,Baga Beach & Tito's Lane,Beach,True,True
+221,221,India,Goa,Basilica of Bom Jesus,UNESCO Heritage,True,True
+222,222,India,Goa,Aguada Fort & Lighthouse,Fort,True,True
+223,223,India,Goa,Dudhsagar Waterfalls,Waterfall,True,True
+224,224,India,Goa,Anjuna Flea Market,Market,True,True
+225,225,India,Goa,Fontainhas Latin Quarter,Heritage Walk,True,True
+226,226,India,Goa,Calangute Beach,Beach,True,True
+227,227,India,Goa,Sahakari Spice Farm,Spice Plantation,True,True
+228,228,France,Paris,Eiffel Tower & Champ de Mars,Landmark,True,True
+229,229,France,Paris,Notre-Dame Cathedral & Île de la Cité,Cathedral,True,True
+230,230,France,Paris,Arc de Triomphe & Champs-Élysées,Monument,True,True
+231,231,France,Paris,Sacre-Coeur Basilica & Montmartre,Basilica,True,True
+232,232,France,Paris,Musée d'Orsay,Art Museum,True,True
+233,233,France,Paris,Palace of Versailles,Palace,True,True
+234,234,France,Paris,Seine River Dinner Cruise,Boat Tour,True,True
+235,235,Italy,Rome,Colosseum & Roman Forum,UNESCO Heritage,True,True
+236,236,Italy,Rome,Vatican City & St. Peter's Basilica,Landmark,True,True
+237,237,Italy,Rome,Trevi Fountain,Landmark,True,True
+238,238,Italy,Rome,Pantheon,Historic Building,True,True
+239,239,Italy,Rome,Piazza Navona,Square,True,True
+240,240,Italy,Rome,Spanish Steps (Scalinata di Trinità dei Monti),Landmark,True,True
+241,241,Italy,Rome,Villa Borghese Gardens & Gallery,Park & Museum,True,True
+242,242,Italy,Rome,Trastevere Neighborhood Walk,Historic District,True,True
+243,243,India,Hyderabad,Charminar & Laad Bazaar,Landmark,True,True
+244,244,India,Hyderabad,Golconda Fort & Sound Show,Fort,True,True
+245,245,India,Hyderabad,Chowmahalla Palace,Palace,True,True
+246,246,India,Hyderabad,Ramoji Film City,Theme Park,True,True
+247,247,India,Hyderabad,Hussain Sagar Lake & Buddha Statue,Lake,True,True
+248,248,India,Hyderabad,Salarchung Museum,Museum,True,True
+249,249,India,Hyderabad,Qutb Shahi Tombs,Heritage Site,True,True
+250,250,India,Hyderabad,Birla Mandir,Temple,True,True
+251,251,India,Hyderabad,Nehru Zoological Park,Zoo,True,True
+252,252,India,Hyderabad,Shilparamam Arts Village,Craft Village,True,True
+253,253,India,Amalapuram,Ainavilli Siddhi Vinayaka Temple,Temple,True,True
+254,254,India,Amalapuram,Dindi Backwaters & Konaseema River Cruise,Backwaters,True,True
+255,255,India,Amalapuram,Appanapalli Bala Balaji Temple,Temple,True,True
+256,256,India,Amalapuram,Muramalla Veereswara Swamy Temple,Temple,True,True
+257,257,India,Amalapuram,Coringa Wildlife Sanctuary,Mangroves & Wildlife,True,True

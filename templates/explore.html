@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Global Destinations - AI Travel Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #faf8f5;
+            color: #2d3748;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background: #ffffff;
+            border-bottom: 1px solid #edf2f7;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .brand-logo {
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: #4a5568;
+            text-decoration: none;
+        }
+        .nav-links a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 600;
+        }
+        .page-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        .search-bar {
+            display: flex;
+            gap: 0.75rem;
+            margin: 1.5rem 0 1rem;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 0.75rem 1.2rem;
+            border: 1px solid #cbd5e0;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            outline: none;
+        }
+        .search-bar button {
+            background: #6c5ce7;
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .continent-tabs {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        .tab-chip {
+            background: #ffffff;
+            border: 1px solid #cbd5e0;
+            padding: 0.45rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #4a5568;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .tab-chip:hover, .tab-chip.active {
+            background: #6c5ce7;
+            color: #ffffff;
+            border-color: #6c5ce7;
+        }
+        .country-selector-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            background: #ffffff;
+            padding: 0.75rem 1.25rem;
+            border-radius: 12px;
+            border: 1px solid #edf2f7;
+        }
+        .country-select {
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            border: 1px solid #cbd5e0;
+            font-size: 0.9rem;
+            outline: none;
+        }
+        .card-grid {
+            display: grid !important;
+            grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+            gap: 1.5rem !important;
+            align-items: stretch !important;
+            margin-top: 1rem;
+        }
+        @media (max-width: 1024px) {
+            .card-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+        }
+        @media (max-width: 640px) {
+            .card-grid {
+                grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+            }
+        }
+        .destination-card {
+            background: #ffffff;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid #edf2f7;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease;
+        }
+        .destination-card:hover {
+            transform: translateY(-4px);
+        }
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .card-body {
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .card-title {
+            margin: 0 0 0.3rem;
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+        .card-subtitle {
+            color: #718096;
+            font-size: 0.85rem;
+            margin-bottom: 0.6rem;
+        }
+        .card-text {
+            color: #4a5568;
+            font-size: 0.88rem;
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+        .btn-view {
+            background: #f1f5f9;
+            color: #6c5ce7;
+            text-align: center;
+            padding: 0.6rem;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background 0.2s ease;
+        }
+        .btn-view:hover {
+            background: #6c5ce7;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <a href="/dashboard" class="brand-logo">✈️ AI Travel Planner</a>
+        <nav class="nav-links">
+            <a href="/dashboard">Dashboard</a>
+            <a href="/explore">Explore</a>
+            <a href="/plan-trip">Plan My Trip</a>
+            <a href="/profile">Profile</a>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <div>
+            <h1 style="margin-bottom: 0.4rem;">Explore Global Destinations 🌏</h1>
+            <p style="color: #718096; margin: 0;">Discover verified travel cities across Asia, Europe, Americas, Africa, and Oceania.</p>
+            
+            <form action="/explore" method="GET" class="search-bar">
+                <input type="text" name="q" value="{{ selected_query or '' }}" placeholder="Search any city or country (e.g. Hyderabad, Amalapuram, Tokyo, Paris, London, Dubai)...">
+                <button type="submit">Search 🔍</button>
+            </form>
+        </div>
+
+        <!-- Filter Controls & Continent Navigation -->
+        <div class="country-selector-row">
+            <span style="font-weight: 700; font-size: 0.9rem; color: #4a5568;">Select Country:</span>
+            <select class="country-select" onchange="if(this.value) window.location.href=this.value;">
+                <option value="/explore" {% if not selected_country or selected_country == 'All' %}selected{% endif %}>All Countries ({{ countries|length }} Countries)</option>
+                {% for c in countries %}
+                <option value="/explore?country={{ c.name }}" {% if selected_country == c.name %}selected{% endif %}>
+                    {{ c.flag_emoji }} {{ c.name }} ({{ c.continent }})
+                </option>
+                {% endfor %}
+            </select>
+
+            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-left: auto;">
+                <a href="/explore" class="tab-chip {% if not selected_country or selected_country == 'All' %}active{% endif %}">All</a>
+                <a href="/explore?country=India" class="tab-chip {% if selected_country == 'India' %}active{% endif %}">🇮🇳 India</a>
+                <a href="/explore?country=Japan" class="tab-chip {% if selected_country == 'Japan' %}active{% endif %}">🇯🇵 Japan</a>
+                <a href="/explore?country=France" class="tab-chip {% if selected_country == 'France' %}active{% endif %}">🇫🇷 France</a>
+                <a href="/explore?country=Italy" class="tab-chip {% if selected_country == 'Italy' %}active{% endif %}">🇮🇹 Italy</a>
+                <a href="/explore?country=United States" class="tab-chip {% if selected_country == 'United States' or selected_country == 'USA' %}active{% endif %}">🇺🇸 USA</a>
+            </div>
+        </div>
+
+        <!-- Destination Cards Grid -->
+        <div class="card-grid">
+            {% if destinations %}
+                {% for dest in destinations %}
+                    <div class="destination-card">
+                        <img src="{{ dest.image or '/static/images/placeholder.svg' }}" 
+                             alt="{{ dest.name }}" 
+                             class="card-img"
+                             onerror="this.onerror=null; this.src='/static/images/placeholder.svg';">
+                        <div class="card-body">
+                            <h3 class="card-title">{{ dest.name }}</h3>
+                            <p class="card-subtitle">📍 {{ dest.state }}, {{ dest.country }}</p>
+                            <p class="card-text">{{ dest.description }}</p>
+                            <div style="font-size: 0.85rem; color: #718096; margin-bottom: 0.8rem; display: flex; justify-content: space-between;">
+                                <span>🌤️ {{ dest.best_time }}</span>
+                                <span>💰 ₹{{ dest.approximate_budget or 5000 }}</span>
+                            </div>
+                            <a href="/destination/{{ dest.id }}" class="btn-view">View Destination 🗺️</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div style="grid-column: 1 / -1; padding: 3rem; text-align: center; background: white; border-radius: 12px; border: 1px solid #edf2f7;">
+                    <h3>No destinations found</h3>
+                    <p style="color: #718096;">Try searching for a different city or country name.</p>
+                    <a href="/explore" class="btn-view" style="display: inline-block; padding: 0.6rem 1.5rem; margin-top: 1rem;">Reset Search</a>
+                </div>
+            {% endif %}
+        </div>
+    </main>
+
+    {% include 'footer.html' %}
+</body>
+</html>

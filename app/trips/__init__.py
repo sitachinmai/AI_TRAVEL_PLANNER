@@ -1,0 +1,3 @@
+"""
+Trips module stub.
+"""

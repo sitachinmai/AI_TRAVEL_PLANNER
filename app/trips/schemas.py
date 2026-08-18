@@ -1,0 +1,3 @@
+"""
+Trips Pydantic schemas stub.
+"""

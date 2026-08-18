@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile & Settings — AI Travel Planner</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #faf8f5;
+      color: #2d3748;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid #edf2f7;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .brand-logo {
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: #4a5568;
+      text-decoration: none;
+    }
+    .nav-links a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #4a5568;
+      font-weight: 600;
+    }
+    .tab-nav {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      border-bottom: 2px solid #e2e8f0;
+      margin-bottom: 24px;
+      padding-bottom: 4px;
+    }
+    .tab-btn {
+      padding: 12px 20px;
+      font-weight: 600;
+      color: #64748b;
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .tab-btn.active {
+      color: #4338ca;
+      border-bottom-color: #4338ca;
+    }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    .card-box {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(16px);
+      border-radius: 20px;
+      border: 1px solid #e2e8f0;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Navbar -->
+  <header class="navbar">
+    <a href="/dashboard" class="brand-logo">✨ AI Travel Planner</a>
+    <nav class="nav-links">
+      <a href="/dashboard">Dashboard</a>
+      <a href="/explore">Explore</a>
+      <a href="/plan-trip">Plan My Trip</a>
+      <a href="/profile" class="active">Profile</a>
+    </nav>
+  </header>
+
+  <main class="main-container" style="max-width: 1000px; margin: 30px auto; padding: 0 20px;">
+    
+    <div class="card-box" style="display: flex; align-items: center; gap: 20px;">
+      <div style="width: 70px; height: 70px; border-radius: 50%; background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); display: flex; justify-content: center; align-items: center; font-size: 2rem; color: #ffffff; box-shadow: 0 6px 18px rgba(99,102,241,0.25);">
+        👤
+      </div>
+      <div>
+        <h1 style="font-size: 1.5rem; color: #0f172a; margin: 0 0 4px;">{{ user.full_name or 'Dev Traveler' }}</h1>
+        <p style="color: #64748b; margin: 0;">{{ user.email or 'dev@aitravelplanner.local' }} • Preferred Language: <strong>{{ (user.preferred_language or 'en').upper() }}</strong></p>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="tab-nav">
+      <button class="tab-btn active" id="btn-details" onclick="showTab('details')">Personal Details</button>
+      <button class="tab-btn" id="btn-preferences" onclick="showTab('preferences')">Travel Preferences</button>
+      <button class="tab-btn" id="btn-settings" onclick="showTab('settings')">Settings</button>
+      <button class="tab-btn" id="btn-trips" onclick="showTab('trips')">Trips Planned</button>
+      <button class="tab-btn" id="btn-favorites" onclick="showTab('favorites')">Favorites</button>
+      <button class="tab-btn" id="btn-history" onclick="showTab('history')">Travel History</button>
+      <button class="tab-btn" id="btn-help" onclick="showTab('help')">❓ Help & Support</button>
+      <button class="tab-btn" id="btn-privacy" onclick="showTab('privacy')">🔒 Privacy Policy</button>
+      <button class="tab-btn" id="btn-terms" onclick="showTab('terms')">📜 Terms of Service</button>
+      <button class="tab-btn" id="btn-contact" onclick="showTab('contact')">📞 Contact Us</button>
+    </div>
+
+    <!-- 1. PERSONAL DETAILS -->
+    <div id="details" class="tab-content active card-box">
+      <h2 style="font-size: 1.2rem; color: #0f172a; margin-bottom: 16px;">Personal Account Details</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+        <div>
+          <label style="font-size: 0.85rem; color: #64748b;">Full Name</label>
+          <div style="font-size: 1.05rem; font-weight: 600; color: #1e293b;">{{ user.full_name or 'Dev Traveler' }}</div>
+        </div>
+        <div>
+          <label style="font-size: 0.85rem; color: #64748b;">Email Address</label>
+          <div style="font-size: 1.05rem; font-weight: 600; color: #1e293b; display: flex; align-items: center; gap: 8px;">
+            {{ user.email or 'dev@aitravelplanner.local' }}
+            <span style="background: #dcfce7; color: #15803d; font-size: 0.75rem; padding: 2px 8px; border-radius: 10px;">✓ Verified</span>
+          </div>
+        </div>
+        <div>
+          <label style="font-size: 0.85rem; color: #64748b;">Mobile Number</label>
+          <div style="font-size: 1.05rem; font-weight: 600; color: #1e293b; display: flex; align-items: center; gap: 8px;">
+            {{ user.mobile_number or '+919876543210' }}
+            <span style="background: #dcfce7; color: #15803d; font-size: 0.75rem; padding: 2px 8px; border-radius: 10px;">✓ Verified</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. TRAVEL PREFERENCES -->
+    <div id="preferences" class="tab-content card-box">
+      <h2 style="font-size: 1.2rem; color: #0f172a; margin-bottom: 16px;">Travel Preferences</h2>
+      <form id="prefForm" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+        <div>
+          <label style="font-size: 0.85rem; color: #64748b;">Preferred Travel Style</label>
+          <select id="prefStyle" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1;">
+            <option value="Budget" {% if user.travel_style == 'Budget' %}selected{% endif %}>Budget</option>
+            <option value="Balanced" {% if user.travel_style == 'Balanced' %}selected{% endif %}>Balanced</option>
+            <option value="Comfort" {% if user.travel_style == 'Comfort' %}selected{% endif %}>Comfort</option>
+            <option value="Premium" {% if user.travel_style == 'Premium' %}selected{% endif %}>Premium</option>
+          </select>
+        </div>
+        <div>
+          <label style="font-size: 0.85rem; color: #64748b;">Food Preference</label>
+          <input type="text" id="prefFood" value="{{ user.food_preference or 'Local Specialties' }}" placeholder="Vegetarian, Seafood, etc." style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1;" />
+        </div>
+        <div style="grid-column: 1 / -1;">
+          <button type="submit" class="btn btn-primary" style="padding: 10px 20px; background: #4f46e5; color: white; border: none; border-radius: 20px; font-weight: 700; cursor: pointer;">Save Preferences</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- 3. SETTINGS -->
+    <div id="settings" class="tab-content card-box">
+      <h2 style="font-size: 1.2rem; color: #0f172a; margin-bottom: 20px;">Account Settings</h2>
+
+      <!-- Language Preference -->
+      <div style="margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid #e2e8f0;">
+        <h3>🌐 Language Preferences</h3>
+        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 10px;">Select your preferred display language.</p>
+        <select id="langSelect" onchange="updateLanguage(this.value)" style="padding: 10px 16px; border-radius: 8px; border: 1px solid #cbd5e1;">
+          <option value="en" {% if user.preferred_language == 'en' %}selected{% endif %}>English</option>
+          <option value="hi" {% if user.preferred_language == 'hi' %}selected{% endif %}>Hindi (हिन्दी)</option>
+          <option value="te" {% if user.preferred_language == 'te' %}selected{% endif %}>Telugu (తెలుగు)</option>
+        </select>
+      </div>
+
+      <!-- Account Security Phase Notice -->
+      <div style="background: #e0f2fe; border: 1px dashed #0284c7; border-radius: 12px; padding: 1.25rem; color: #0369a1; text-align: center;">
+        <h3 style="margin: 0 0 0.5rem; font-size: 1.1rem;">🔒 Account Security & Authentication</h3>
+        <p style="margin: 0; font-weight: 600; font-size: 0.95rem;">Account security (Password changes, Email OTP, Mobile Phone OTP verification) is active in guest/developer mode.</p>
+      </div>
+    </div>
+
+    <!-- 4. TRIPS PLANNED -->
+    <div id="trips" class="tab-content card-box">
+      <h2 style="font-size: 1.2rem; color: #0f172a; margin-bottom: 16px;">Your Planned Trips</h2>
+      {% if trips %}
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          {% for t in trips %}
+            <div style="background: #f8fafc; border-radius: 12px; padding: 16px; border: 1px solid #e2e8f0;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <h3 style="font-size: 1.1rem; color: #0f172a; margin: 0;">{{ t.title }}</h3>
+                <span style="font-size: 0.9rem; font-weight: 700; color: #059669;">₹{{ t.total_budget }}</span>
+              </div>
+              <p style="font-size: 0.85rem; color: #64748b; margin: 0;">{{ t.destination_name }} • {{ t.number_of_days }} Days • {{ t.trip_type }} Trip ({{ t.travel_style }})</p>
+            </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p style="color: #64748b;">No trips created yet.</p>
+      {% endif %}
+    </div>
+
+    <!-- 5. FAVORITES -->
+    <div id="favorites" class="tab-content card-box">
+      <h2 style="font-size: 1.2rem; color: #0f172a; margin-bottom: 16px;">Saved Favorites</h2>
+      {% if favorites %}
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px;">
+          {% for f in favorites %}
+            <div style="background: #fff5f5; border-radius: 12px; padding: 14px; border: 1px solid #fecdd3;">
+              <div style="font-weight: 700; color: #9f1239;">{{ f.title }}</div>
+              <div style="font-size: 0.8rem; color: #be123c;">Saved {{ f.item_type }}</div>
+            </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p style="color: #64748b;">No favorites saved yet.</p>
+      {% endif %}
+    </div>
+
+    <!-- 6. TRAVEL HISTORY -->
+    <div id="history" class="tab-content card-box">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h2 style="font-size: 1.2rem; color: #0f172a; margin: 0;">Recently Viewed Destinations</h2>
+        <button onclick="clearHistory()" class="btn btn-secondary" style="font-size: 0.8rem; padding: 4px 10px;">Clear History</button>
+      </div>
+      {% if history %}
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          {% for h in history %}
+            <div style="padding: 10px; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0;">
+              Viewed <strong>{{ h.title }}</strong>
+            </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p style="color: #64748b;">No travel history recorded yet.</p>
+      {% endif %}
+    </div>
+
+    <!-- 7. HELP & SUPPORT CENTER -->
+    <div id="help" class="tab-content card-box">
+      <h2 style="font-size: 1.4rem; color: #1e1b4b; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+        ❓ Help & Support Center
+      </h2>
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="background: rgba(241, 245, 249, 0.8); padding: 16px; border-radius: 14px; border: 1px solid #e2e8f0;">
+          <h4 style="color: #4338ca; margin: 0 0 6px;">How do I generate a multi-day itinerary?</h4>
+          <p style="font-size: 0.95rem; color: #334155; margin: 0;">Navigate to the Dashboard or Plan My Trip page, select any of the 195 world countries or cities, and click 'Plan Trip' or ask the AI Travel Assistant!</p>
+        </div>
+        <div style="background: rgba(241, 245, 249, 0.8); padding: 16px; border-radius: 14px; border: 1px solid #e2e8f0;">
+          <h4 style="color: #4338ca; margin: 0 0 6px;">Can I modify specific days of a generated trip?</h4>
+          <p style="font-size: 0.95rem; color: #334155; margin: 0;">Yes! Ask the AI Chatbot questions like <em>'Make Day 2 cheaper'</em> or <em>'Add more nature places'</em> to update specific days instantly.</p>
+        </div>
+        <div style="background: rgba(241, 245, 249, 0.8); padding: 16px; border-radius: 14px; border: 1px solid #e2e8f0;">
+          <h4 style="color: #4338ca; margin: 0 0 6px;">Where can I find destination emergency contacts?</h4>
+          <p style="font-size: 0.95rem; color: #334155; margin: 0;">Open any destination detail page and click the '🚨 Emergency Info' tab for verified police, medical, and tourist helpline numbers.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. PRIVACY POLICY -->
+    <div id="privacy" class="tab-content card-box">
+      <h2 style="font-size: 1.4rem; color: #1e1b4b; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+        🔒 Privacy Policy
+      </h2>
+      <p style="font-size: 0.95rem; line-height: 1.7; color: #334155; margin-bottom: 14px;">
+        Your privacy is important to us at <strong>AI Travel Planner</strong>. We process your travel preferences, saved trips, and itinerary queries to provide personalized travel recommendations.
+      </p>
+      <div style="background: rgba(241, 245, 249, 0.8); padding: 16px; border-radius: 14px; border: 1px solid #e2e8f0;">
+        <h4 style="color: #4f46e5; margin: 0 0 6px;">Data Protection & Safety</h4>
+        <ul style="margin: 0; padding-left: 20px; font-size: 0.9rem; color: #475569;">
+          <li>Travel history and favorite destinations are stored securely in the application's database.</li>
+          <li>We do NOT sell or share your personal profile data with third-party tracking networks.</li>
+          <li>Guest session cookies are strictly utilized for seamless travel planning state retention.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 9. TERMS OF SERVICE -->
+    <div id="terms" class="tab-content card-box">
+      <h2 style="font-size: 1.4rem; color: #1e1b4b; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+        📜 Terms of Service
+      </h2>
+      <p style="font-size: 0.95rem; line-height: 1.7; color: #334155; margin-bottom: 14px;">
+        Welcome to <strong>AI Travel Planner</strong>. By utilizing our web application, custom itinerary builder, and 3D globe explorer, you agree to these Terms of Service.
+      </p>
+      <div style="background: rgba(241, 245, 249, 0.8); padding: 16px; border-radius: 14px; border: 1px solid #e2e8f0;">
+        <h4 style="color: #4f46e5; margin: 0 0 6px;">Usage Guidelines & Travel Information</h4>
+        <ul style="margin: 0; padding-left: 20px; font-size: 0.9rem; color: #475569;">
+          <li>Itinerary budgets and ticket fees are estimated guidelines; actual local vendor prices may vary seasonally.</li>
+          <li>Global locality dataset is derived from OpenStreetMap contributors under Open Database License (ODbL).</li>
+          <li>Users may freely save, export, and modify custom trip plans for personal non-commercial travel.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 10. CONTACT US -->
+    <div id="contact" class="tab-content card-box">
+      <h2 style="font-size: 1.4rem; color: #1e1b4b; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+        📞 Contact Support
+      </h2>
+      <p style="font-size: 0.95rem; line-height: 1.7; color: #334155; margin-bottom: 16px;">
+        Have questions, feedback, or need assistance with your travel plans? Our support team is here to help!
+      </p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
+        <div style="background: rgba(238, 242, 255, 0.8); padding: 16px; border-radius: 14px; border: 1px solid #c7d2fe;">
+          <h4 style="color: #4338ca; margin: 0 0 4px;">📧 Email Support</h4>
+          <p style="font-size: 0.9rem; color: #3730a3; margin: 0; font-weight: 600;">support@aitravelplanner.local</p>
+        </div>
+        <div style="background: rgba(238, 242, 255, 0.8); padding: 16px; border-radius: 14px; border: 1px solid #c7d2fe;">
+          <h4 style="color: #4338ca; margin: 0 0 4px;">💬 AI Assistant</h4>
+          <p style="font-size: 0.9rem; color: #3730a3; margin: 0; font-weight: 600;">Ask questions 24/7 on /chat</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  {% include 'footer.html' %}
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+      const btn = document.getElementById('btn-' + tabId);
+      if (btn) btn.classList.add('active');
+
+      const target = document.getElementById(tabId);
+      if (target) {
+        target.classList.add('active');
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function handleHashNavigation() {
+      const hash = window.location.hash.replace('#', '');
+      if (hash && ['privacy', 'terms', 'help', 'contact', 'details', 'preferences', 'settings', 'trips', 'favorites', 'history'].includes(hash)) {
+        showTab(hash);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', handleHashNavigation);
+    window.addEventListener('hashchange', handleHashNavigation);
+
+    async function updateLanguage(lang) {
+      await fetch('/auth/language', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ language: lang })
+      });
+      alert('Language preference updated!');
+    }
+
+    async function clearHistory() {
+      await fetch('/history', { method: 'DELETE' });
+      alert('Travel history cleared!');
+      window.location.reload();
+    }
+  </script>
+</body>
+</html>

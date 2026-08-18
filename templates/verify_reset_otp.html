@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Reset OTP — {{ app_name }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        .otp-inputs {
+            display: flex;
+            gap: 0.6rem;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+        .otp-digit {
+            width: 52px;
+            height: 60px;
+            font-size: 1.6rem;
+            font-weight: 800;
+            text-align: center;
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-md);
+            background: var(--bg-card);
+            transition: all 0.2s ease;
+        }
+        .otp-digit:focus {
+            outline: none;
+            border-color: var(--lavender-deep);
+            background: var(--lavender-soft);
+        }
+        .timer-badge {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="/" class="brand-logo">
+                <span class="logo-icon">✈️</span>
+                <span class="logo-text">{{ app_name }}</span>
+            </a>
+            <nav class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/explore" class="nav-link">Explore</a>
+                <a href="/login" class="nav-link">Login</a>
+                <a href="/register" class="btn btn-primary btn-sm">Register</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-container flex-center">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h2>Password Reset Code 🔑</h2>
+                <p>Enter the 5-digit password reset code sent to your email inbox (or <code>data/dev_emails.log</code>).</p>
+            </div>
+
+            <div id="auth-alert" class="alert alert-error hidden"></div>
+
+            <form id="verify-reset-otp-form">
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" class="form-control" value="{{ email }}" placeholder="name@example.com" required>
+                </div>
+
+                <div class="otp-inputs" id="otp-inputs-container">
+                    <input type="text" maxlength="1" class="otp-digit" pattern="[0-9]" inputmode="numeric" required autofocus>
+                    <input type="text" maxlength="1" class="otp-digit" pattern="[0-9]" inputmode="numeric" required>
+                    <input type="text" maxlength="1" class="otp-digit" pattern="[0-9]" inputmode="numeric" required>
+                    <input type="text" maxlength="1" class="otp-digit" pattern="[0-9]" inputmode="numeric" required>
+                    <input type="text" maxlength="1" class="otp-digit" pattern="[0-9]" inputmode="numeric" required>
+                </div>
+
+                <div class="timer-badge">
+                    Code expires in: <strong id="timer-display">10:00</strong>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block margin-top-md">Verify Reset Code 🚀</button>
+            </form>
+
+            <div class="auth-footer flex-between margin-top-md">
+                <a href="/forgot-password" class="link-sm">Request New Code</a>
+                <a href="/login" class="link-sm">Back to Login</a>
+            </div>
+        </div>
+    </main>
+
+    {% include 'footer.html' %}
+
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/auth.js"></script>
+    <script>
+        const otpInputs = document.querySelectorAll('.otp-digit');
+        otpInputs.forEach((input, index) => {
+            input.addEventListener('input', (e) => {
+                if (e.target.value.length === 1 && index < otpInputs.length - 1) {
+                    otpInputs[index + 1].focus();
+                }
+            });
+
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && !e.target.value && index > 0) {
+                    otpInputs[index - 1].focus();
+                }
+            });
+
+            input.addEventListener('paste', (e) => {
+                e.preventDefault();
+                const pasted = (e.clipboardData || window.clipboardData).getData('text').trim();
+                if (/^\d{5}$/.test(pasted)) {
+                    pasted.split('').forEach((char, i) => {
+                        if (otpInputs[i]) otpInputs[i].value = char;
+                    });
+                    otpInputs[4].focus();
+                }
+            });
+        });
+
+        let timeLeft = 600;
+        const timerDisplay = document.getElementById('timer-display');
+        const timerInterval = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                timerDisplay.textContent = 'Expired';
+                timerDisplay.style.color = '#991b1b';
+                return;
+            }
+            timeLeft--;
+            const mins = Math.floor(timeLeft / 60);
+            const secs = timeLeft % 60;
+            timerDisplay.textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }, 1000);
+    </script>
+</body>
+</html>

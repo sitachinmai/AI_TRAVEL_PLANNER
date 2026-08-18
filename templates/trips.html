@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Trips — {{ app_name }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="/" class="brand-logo">
+                <span class="logo-icon">✈️</span>
+                <span class="logo-text">{{ app_name }}</span>
+            </a>
+            <nav class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/explore" class="nav-link">Explore</a>
+                <a href="/dashboard" class="nav-link">Plan a Trip</a>
+                <a href="/trips" class="nav-link active">My Trips</a>
+                <a href="/favorites" class="nav-link">Favorites</a>
+                <a href="/chat" class="nav-link">AI Assistant</a>
+                <a href="/profile" class="nav-link">Profile</a>
+                <button id="logout-btn" class="btn btn-outline btn-sm">Logout</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-container">
+        <div class="page-header flex-between">
+            <div>
+                <h1>My Trips 🧳</h1>
+                <p>Manage and view your saved trip itineraries</p>
+            </div>
+            <a href="/chat" class="btn btn-primary">+ Create New Trip</a>
+        </div>
+
+        <div class="empty-state-card margin-top-xl">
+            <div class="empty-icon">🗺️</div>
+            <h3>Your saved trips will appear here</h3>
+            <p>You haven't generated any trip itineraries yet. Start planning your custom journey!</p>
+            <a href="/chat" class="btn btn-primary btn-sm margin-top-sm">Plan a Trip</a>
+        </div>
+    </main>
+
+    {% include 'footer.html' %}
+
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/auth.js"></script>
+</body>
+</html>

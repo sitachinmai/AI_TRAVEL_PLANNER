@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification - {{ app_name }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="/" class="brand-logo">
+                <span class="logo-icon">🌸</span>
+                <span class="logo-text">{{ app_name }}</span>
+            </a>
+            <nav class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/login" class="nav-link">Login</a>
+                <a href="/register" class="nav-link">Register</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="hero-section">
+        <div class="auth-card">
+            <div class="badge">📩 Account Verification</div>
+            <h2 class="auth-title">Email Verification</h2>
+            <p class="auth-subtitle" id="verifyStatusText">Validating your verification token...</p>
+
+            <div id="verifyAlert" class="auth-alert hidden"></div>
+
+            <div id="verifyActions" class="hero-buttons hidden" style="margin-top: 1.5rem; margin-bottom: 0;">
+                <a href="/login" class="btn btn-primary btn-block">Proceed to Login 🔐</a>
+            </div>
+        </div>
+    </main>
+
+    {% include 'footer.html' %}
+
+    <script src="/static/js/auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const token = urlParams.get('token');
+            const alertBox = document.getElementById('verifyAlert');
+            const statusText = document.getElementById('verifyStatusText');
+            const actionsBox = document.getElementById('verifyActions');
+
+            if (!token) {
+                statusText.textContent = 'No verification token provided.';
+                showAlert(alertBox, 'Missing verification token. Please check your verification link.', 'error');
+                return;
+            }
+
+            try {
+                const res = await fetch(`/auth/verify-email?token=${encodeURIComponent(token)}`);
+                const data = await res.json();
+
+                if (res.ok) {
+                    statusText.textContent = 'Account Verified!';
+                    showAlert(alertBox, data.message || 'Your email has been successfully verified.', 'success');
+                    actionsBox.classList.remove('hidden');
+                } else {
+                    statusText.textContent = 'Verification Failed';
+                    showAlert(alertBox, data.detail || 'Invalid or expired verification link.', 'error');
+                }
+            } catch (err) {
+                statusText.textContent = 'Verification Error';
+                showAlert(alertBox, 'Error communicating with verification server.', 'error');
+            }
+
+            function showAlert(element, message, type) {
+                if (!element) return;
+                element.classList.remove('hidden', 'success', 'error');
+                element.classList.add('auth-alert', type);
+                element.textContent = message;
+            }
+        });
+    </script>
+</body>
+</html>

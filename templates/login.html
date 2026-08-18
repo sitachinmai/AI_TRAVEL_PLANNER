@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login — {{ app_name }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="/" class="brand-logo">
+                <span class="logo-icon">✈️</span>
+                <span class="logo-text">{{ app_name }}</span>
+            </a>
+            <nav class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/explore" class="nav-link">Explore</a>
+                <a href="/login" class="nav-link active">Login</a>
+                <a href="/register" class="btn btn-primary btn-sm">Register</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-container flex-center">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h2>Welcome Back</h2>
+                <p>Log in to access your personal travel dashboard</p>
+            </div>
+
+            <div id="auth-alert" class="alert alert-error hidden"></div>
+
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="name@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <div class="flex-between">
+                        <label for="password" class="form-label">Password</label>
+                        <a href="/forgot-password" class="link-sm">Forgot password?</a>
+                    </div>
+                    <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block margin-top-md">Log In 🚀</button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Don't have an account? <a href="/register" class="link-bold">Create one</a></p>
+            </div>
+        </div>
+    </main>
+
+    {% include 'footer.html' %}
+
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/auth.js"></script>
+</body>
+</html>
