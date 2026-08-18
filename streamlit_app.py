@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from app.database.database import init_db, SessionLocal
 from app.database.seed import seed_data
-from app.travel.service import get_all_countries, get_all_destinations, get_destination_detail
+from app.travel.service import get_all_countries, get_all_destinations, get_destination_by_id
 from app.ai.agent import process_ai_chat_message
 from app.core.research import get_research_url
 from app.core.images import clean_image_url
@@ -132,7 +132,7 @@ if navigation == "✈️ Explore Destinations":
     if st.session_state.get("show_dest_modal") and st.session_state.get("selected_dest_id"):
         st.markdown("---")
         db = SessionLocal()
-        d_detail = get_destination_detail(db, st.session_state["selected_dest_id"])
+        d_detail = get_destination_by_id(db, st.session_state["selected_dest_id"])
         db.close()
 
         if d_detail:
